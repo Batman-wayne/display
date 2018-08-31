@@ -1,6 +1,13 @@
-p {
+h1 {
   font-family: Garamond; 
   font-size: 1000%;
+  text-align: center;
+  color: white;
+}
+
+p {
+  font-family: Garamond; 
+  font-size: 500%;
   text-align: center;
   color: white;
 }
