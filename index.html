@@ -1,50 +1,41 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>The official website of Harris Mohamed</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
-  </head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="script.js"></script>
+<title> The official website of Harris Mohamed </title>
+</head>
+    
+<body>
+    
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openPage(event, 'Projects')">Projects</button>
+  <button class="tablinks" onclick="openPage(event, 'Resume')">Resume</button>
+  <button class="tablinks" onclick="openPage(event, 'Contact/About')">Contact/About</button>
+</div>
 
-  <body>
+<!-- Tab content -->
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>This is the home page.</p>
+</div>
 
+<div id="Projects" class="tabcontent">
+  <h3>Projects</h3>
+  <p>This is the projects page.</p> 
+</div>
 
-    <!-- Nav tabs -->
-  <ul class="nav nav-tabs md-tabs nav-justified">
-      <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Home</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Projects</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">Resume</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">Contact/About</a>
-      </li>
-  </ul>
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+<div id="Resume" class="tabcontent">
+  <h3>Resume</h3>
+  <p>This is my resume.</p>
+</div>
+    
+<div id="Contact/About" class="tabcontent">
+  <h3>Contact/About</h3>
+  <p>This is my contact page.</p>
+</div>
+    
 </body>
-
 </html>
