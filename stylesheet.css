@@ -36,7 +36,7 @@
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-top: none;
     color: #FA6300;
     font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -47,6 +47,25 @@ img {
     margin-top: 3px;
     margin-right: 3px;
     float: right;
+}
+
+test {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+
+fb {
+    margin-bottom: 3px;
+}
+
+div.ifeImage {
+    content:url(image/ife.png);
+    width: 100%;
+    margin-top: 0px;
+    padding: 0px;
+    max-height: px;
+    max-width: 2000px;
 }
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
