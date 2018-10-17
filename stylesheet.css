@@ -35,7 +35,7 @@
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 0;
     /* border: 1px solid #ccc; */
     border-top: none;
     color: #FA6300;
@@ -66,6 +66,24 @@ div.ifeImage {
     padding: 0px;
     max-height: px;
     max-width: 2000px;
+    position: relative;
+}
+
+div.profile {
+       margin-top: 0px; 
+    padding: 0px;
+}
+
+div.headshot {
+  position: absolute;
+  float: left;
+  padding: 0;
+  margin-top: 0px;
+  margin-left: 100px; 
+}
+
+div.bullet {
+    float:right;
 }
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
