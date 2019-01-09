@@ -60,7 +60,7 @@ fb {
 }
 
 div.ifeImage {
-    background-image:url(image/ife.png);
+    content:url(image/ife.png);
     width: 100%;
     margin-top: 0px;
     padding: 0px;
