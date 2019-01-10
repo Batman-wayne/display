@@ -1,0 +1,98 @@
+/* Style the tab */
+tab {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid #FA6300;
+    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #131F33;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: 1px solid #FA6300;
+    outline: none;
+    cursor: pointer;
+    color: #FA6300;
+    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #FA6300;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #081222;
+    color: #E0E0E0;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 0;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    color: #FA6300;
+    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+img {
+    margin-top: 3px;
+    margin-right: 3px;
+    float: right;
+}
+
+test {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+
+fb {
+    margin-bottom: 3px;
+}
+
+div.ifeImage {
+    content:url(image/ife.png);
+    width: 100%;
+    margin-top: 0px;
+    padding: 0px;
+    max-height: px;
+    max-width: 2000px;
+    position: relative;
+}
+
+div.profile {
+       margin-top: 0px; 
+    padding: 0px;
+}
+
+div.headshot {
+  position: absolute;
+  float: left;
+  padding: 0;
+  margin-top: 0px;
+  margin-left: 100px; 
+}
+
+header {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: none;
+    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
