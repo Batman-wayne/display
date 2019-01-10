@@ -11,10 +11,10 @@
 } */
 
 html { 
-    font-size: calc(1em + 1vw)
+    font-size: calc(1em + 1vw);
+    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 header {    
-    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 3em;
 }
