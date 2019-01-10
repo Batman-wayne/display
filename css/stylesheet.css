@@ -13,8 +13,10 @@
 html { 
     font-size: calc(1em + 1vw);
     font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:#131F33;
 }
 
 header {    
     font-size: 3em;
+    color: white;
 }
