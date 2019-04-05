@@ -75,6 +75,7 @@ html, body {
     position: fixed;
     overflow: hidden;
     background-image: none;
+    text-align: center;
     z-index: 4;
   }
   
@@ -88,26 +89,35 @@ html, body {
 
   .iconAlign{
       text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
   }
   
   .nav-items a{
-    float: right;
+    /* float: right; */
+    text-align: center;
     display: inline-block;
     color: #fff;
     font-size: 1.5em;
     font-weight: 300;
-    text-align: center;
     padding: 15px 20px;
     text-decoration: none;
   }
   .nav-items a:hover {
     color: #fa6300;
   }
+    
   
   .hamburgerIcon a{
     display: none;
   }
   
+  /* .lorem{
+    /* font-size: 1.5em;   
+    color: #fff;   
+    display: inline-block;  
+  } */
+
   a.anchor {
       display: block;
       position: relative;
@@ -121,6 +131,7 @@ html, body {
     text-align: center;
   }
 
+
   .header {
     width: 100%;
     text-align: center;
@@ -129,7 +140,8 @@ html, body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: 2%;
+    margin-top: 0%;
+    margin-bottom: 0%;
     z-index: 1;  
     overflow: hidden;
   }
@@ -149,7 +161,8 @@ html, body {
   }
   
   .heroImage {
-    height: 100vh;
+    margin-top: 10%;
+    height: 80vh;
     position: relative;
     background: url(../images/ife.png) center center;
     background-size: cover;
@@ -399,7 +412,7 @@ html, body {
   
   @media screen and (max-height:600px) and (orientation:landscape) {
     .landingPage {
-      text-align: right;
+      text-align: center;
     }
     .heroText {
       width: 100%;
