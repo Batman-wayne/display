@@ -89,8 +89,10 @@ html, body {
 
   .iconAlign{
       text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 7%;
+      margin-bottom: 1px;
+      /* z-index: 0; */
+      /* position: relative; */
   }
   
   .nav-items a{
@@ -112,11 +114,6 @@ html, body {
     display: none;
   }
   
-  /* .lorem{
-    /* font-size: 1.5em;   
-    color: #fff;   
-    display: inline-block;  
-  } */
 
   a.anchor {
       display: block;
@@ -161,10 +158,10 @@ html, body {
   }
   
   .heroImage {
-    margin-top: 10%;
+    margin-top: 1%;
     height: 80vh;
     position: relative;
-    background: url(../images/ife.png) center center;
+    background: url(../images/booth_1.jpg) center center;
     background-size: cover;
     z-index: 0;
   }
