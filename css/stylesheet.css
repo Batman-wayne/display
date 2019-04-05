@@ -1,12 +1,421 @@
-html { 
-    font-size: calc(1em + 1vw);
-    font-family: "Titillium Web", "Source Sans Pro", Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #131F33;
-}
+/* GENERAL STYLES
+-----------------------------------*/
+html, body {
+    overflow-x:hidden;
+  }
+  
+  html {
+    overflow-y: scroll;
+  }
+  
+  body {
+    background-color: #131f33;
+    background-position: 0 -2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  strong {
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 2em;
+    color: #fff;
+  }
+  h3 {
+    font-size: 1.7em;
+    color: #fff;
+  }
+  h4 {
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .title {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* COLORS
+  -------------------------------------*/
+  .is-white {
+    background-color: #fff;
+  }
+  
+  .is-illiniBlue {
+    background-color: #131f33;
+  }
+  
+  .is-illiniBlueShade {
+    background-color: #37445a;
+  }
+  
+  .is-illiniBlueShade2 {
+    background-color: #081222;
+  }
+  
+  .is-illiniOrange {
+    background-color: #fa6300;
+  }
+  
+  .is-illiniOrangeShade {
+    background-color: #ff8637;
+  }
+  
+  /* NAV
+  --------------------------*/
+  .nav {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-image: none;
+    z-index: 4;
+  }
+  
+  .nav-logo {
+    /* float: center; */
+    display: inline-block;
+    height: 45px;
+    padding-left: 20px;
+    margin-top: 8px;
+  }
 
-h1 {    
+  .iconAlign{
+      text-align: center;
+  }
+  
+  .nav-items a{
+    float: right;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  .nav-items a:hover {
+    color: #fa6300;
+  }
+  
+  .hamburgerIcon a{
+    display: none;
+  }
+  
+  a.anchor {
+      display: block;
+      position: relative;
+      top: -50px;
+      visibility: hidden;
+  }
+  
+  /* HERO BANNER-IMAGE */
+  
+  .landingPage {
+    text-align: center;
+  }
+
+  .header {
+    width: 100%;
+    text-align: center;
     font-size: 4em;
     color: white;
-    background-color: #131F33;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 2%;
+    z-index: 1;  
+    overflow: hidden;
+  }
+    
+  .heroTitle {
+    font-size: 6em;
+    color: #131f33;
+    font-weight: 600;
+  }
+  .heroTitle span {
+    color: #fa6300;
+  }
+  .sub {
+    font-size: 4em;
+    font-weight: normal;
+    margin-top: -30px;
+  }
+  
+  .heroImage {
+    height: 100vh;
+    position: relative;
+    background: url(../images/ife.png) center center;
+    background-size: cover;
+    z-index: 0;
+  }
+  
+  /* TOP SPONSORS PAGE*/
+  
+  .sponsors {
     text-align: center;
-}
+    padding: 10px 20px;
+    padding-bottom: 20px;
+  }
+  
+  .background_line {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .background_line:before {
+    content: "";
+    z-index: -1;
+    margin: 0 auto;
+    position: absolute;
+    border-top: 1px solid #fff;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+  }
+  
+  .background_line span {
+    padding: 0 15px;
+    z-index: 10;
+  }
+  
+  .sponsorsImg {
+    display: inline-block;
+    padding-top: 10px;
+  }
+  
+  /* ABOUT CAR */
+  .arrow {
+    z-index: 3;
+    cursor: pointer;
+    height: 40px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 40px;
+  }
+  
+  #control-next {
+    border-right: 3px solid #fa6300;
+    border-top: 3px solid #fa6300;
+    right: 5%;
+  }
+  #control-prev {
+    border-bottom: 3px solid #fa6300;
+    border-left: 3px solid #fa6300;
+    left: 5%;
+  }
+  
+  .cars {
+    position: relative;
+    padding: 0px 100px;
+  }
+  .carCard {
+    max-height: 360px;
+  }
+  .innerCarCard {
+    padding: 15px 0px;
+  }
+  .carImgWrap {
+    padding-right: 0px;
+  }
+  .carImg2019 {
+    background: url(../images/ife19_sideCar_placeholder.jpg) center center;"
+    background-size: cover;
+    z-index: 0;
+    max-height: 360px;
+  }
+  .carImg2018 {
+    background: url(../images/fsae2018_lincoln_sideCar_c_e.jpg) center center;"
+    background-size: cover;
+    z-index: 0;
+    max-height: 360px;
+  }
+  .carImg2017 {
+    background: url(../images/ife18_web_Lincoln17_v2_c.jpg) center center;"
+    background-size: cover;
+    z-index: 0;
+    max-height: 360px;
+  }
+  
+  .carInfo h4{
+    color: #ff8637;
+    line-height: 1.0em;
+    font-weight: 200;
+  }
+  
+  .carInfo h4 span {
+    color: white;
+  }
+  
+  /* TEAM SECTION */
+  .teamOverall {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  
+  .team {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .member {
+    padding-bottom: 10px;
+  }
+  
+  .centerRow {
+    display:inline-block;
+    float:none;
+  }
+  
+  .card {
+    max-width: 300px;
+    height: auto;
+    margin-top: -10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .teamName {
+    font-weight: 300;
+  }
+  
+  .teamMemberTitle {
+    font-weight: 200;
+  }
+  
+  .join {
+    text-align: center;
+  }
+  
+  .typeform-widget {
+    width: 80%;
+    height: 800px;
+    display: inline-block;
+  }
+  
+  /* MOBILE PAGE ---------------------------- */
+  @media screen and (max-width:1130px) {
+    .cars {
+      padding: 0px 0px;
+    }
+  }
+  
+  @media screen and (max-width:766px) {
+    .nav-logo {
+      height: 43px;
+      padding-bottom: 8px;
+    }
+    .nav-items a{
+      display: none;
+    }
+    .hamburgerIcon a{
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: -5px;
+    }
+  
+    .nav-items.responsive {
+      display: block;
+      margin-top: 50px;
+      background-color: #37445A;
+    }
+    .nav-items.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+      /* FULL WIDTH EXPAND */
+      margin: 0 -9999px;
+      /* add back negative margin value */
+      padding: 14px 9999px;
+    }
+  
+    .heroText {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      margin-top: 20%;
+      z-index: 1;
+    }
+    .heroTitle {
+      font-size: 3em;
+      color: #131f33;
+      font-weight: 600;
+    }
+    .heroTitle span {
+      color: #fa6300;
+    }
+    .sub {
+      font-size: 2em;
+      font-weight: normal;
+      margin-top: 0px;
+    }
+  
+    .instagram {
+      width: 100%;
+    }
+  
+    .arrow {
+      margin-top: -10px;
+      top: 75%;
+      transform: rotate(45deg);
+      width: 40px;
+    }
+    #control-next {
+      right: 7%;
+    }
+    #control-prev {
+      left: 7%;
+    }
+    .cars {
+      padding: 0px 0px;
+      position: relative;
+    }
+    .carCard {
+      text-align: center;
+    }
+    .carImgWrap {
+      padding: 0;
+    }
+  
+    .typeform-widget {
+      width: 100%;
+      height: 500px;
+    }
+  }
+  
+  @media screen and (max-height:600px) and (orientation:landscape) {
+    .landingPage {
+      text-align: right;
+    }
+    .heroText {
+      width: 100%;
+      margin-top: 9%;
+      padding-right: 5%
+    }
+    .heroTitle {
+      font-size: 3em;
+    }
+    .sub {
+      font-size: 2em;
+      font-weight: normal;
+      margin-top: -20px;
+    }
+    .cars {
+      padding: 0px 0px;
+    }
+  }
+  
