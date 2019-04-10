@@ -159,13 +159,34 @@ html, body {
   
   .heroImage {
     margin-top: 1%;
-    height: 80vh;
+    height: 50vh;
     position: relative;
     background: url(../images/booth_1.jpg) center center;
     background-size: cover;
     z-index: 0;
   }
   
+  .lorem {
+    display: inline-block;
+  }
+
+  .headshot {
+    float: left;
+    margin-left: 1%;
+    margin-top: 2%;
+    height: 275px;
+    width: 275px;
+    border-radius: 50%;
+    /* display: inline-block; */
+  }
+
+  .yaboi {
+    float: left;
+    text-align: left;
+    margin-left: 1%;
+    word-wrap: break-word;
+    position: relative;
+  }
   /* TOP SPONSORS PAGE*/
   
   .sponsors {
