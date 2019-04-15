@@ -71,7 +71,7 @@ html, body {
   /* NAV
   --------------------------*/
   .nav {
-    width: 100%;
+    /* width: 100%; */
     position: fixed;
     overflow: hidden;
     background-image: none;
@@ -89,31 +89,88 @@ html, body {
 
   .iconAlign{
       text-align: center;
-      margin-top: 7%;
-      margin-bottom: 1px;
+      margin-top: 2%;
+      margin-bottom: 10px;
       /* z-index: 0; */
       /* position: relative; */
   }
   
-  .nav-items a{
-    /* float: right; */
+  .nav-items {
+    overflow: hidden;
+    /* display: inline-block; */
+    /* width: 100%;
+    position: relative; */
+    /* float: center; */
     text-align: center;
-    display: inline-block;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: 300;
-    padding: 15px 20px;
+    background-color: #333;
+  }
+  
+  .nav-items a {
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
     text-decoration: none;
   }
-  .nav-items a:hover {
-    color: #fa6300;
+  
+  .dropdown {
+    display: inline-block;
   }
-    
+  
+
+  .dropdown .dropbtn {
+    margin: none;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+  }
+  
+  .nav-items a:hover, .dropdown:hover .dropbtn{
+    background-color: grey;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: black;
+    min-width: 160px;
+    text-align: center;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: grey;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    color: black;
+  }
   
   .hamburgerIcon a{
     display: none;
   }
   
+  a:hover {
+    color: white;
+    text-decoration: none;
+    
+  }
 
   a.anchor {
       display: block;
@@ -121,7 +178,22 @@ html, body {
       top: -50px;
       visibility: hidden;
   }
+
+  a:visited {
+    color: white;
+    text-decoration: none; 
   
+  }
+  
+  a:active {
+    color: white;
+    text-decoration: none; 
+  }
+
+  a:link {
+    color: white;
+    text-decoration: none; 
+  }
   /* HERO BANNER-IMAGE */
   
   .landingPage {
@@ -169,7 +241,7 @@ html, body {
   .lorem {
     display: inline-block;
   }
-
+  
   .headshot {
     float: left;
     margin-left: 1%;
@@ -181,12 +253,31 @@ html, body {
   }
 
   .yaboi {
-    float: left;
+    font-size: 1em;
     text-align: left;
     margin-left: 1%;
     word-wrap: break-word;
     position: relative;
+    /* display: block; */
+    overflow: hidden;
+    height: 275px;
+    display: table-cell;
+    vertical-align: middle;
   }
+
+  .IFE_link {
+   color: white;
+  }
+
+  .IFE_link a{
+    color: white;
+    text-decoration: none;
+   }
+
+   .IFE_link a:hover{
+    color: white;
+    text-decoration: none;
+   }
   /* TOP SPONSORS PAGE*/
   
   .sponsors {
