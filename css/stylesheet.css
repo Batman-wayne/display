@@ -71,7 +71,7 @@ html, body {
   /* NAV
   --------------------------*/
   .nav {
-    /* width: 100%; */
+    width: 100%;
     position: fixed;
     overflow: hidden;
     background-image: none;
@@ -97,18 +97,20 @@ html, body {
   
   .nav-items {
     overflow: hidden;
-    /* display: inline-block; */
-    /* width: 100%;
-    position: relative; */
-    /* float: center; */
+    /* position: absolute;
+    left: 50%; 
+    transform: translate(-50%, -50%); */
+    float: center;
+    align-content: center;
     text-align: center;
     background-color: #333;
   }
   
+  
   .nav-items a {
-    font-size: 16px;
-    position: relative;
-    text-align: center;
+    font-size: 18px;
+    /* position: relative; */
+    /* text-align: center; */
     color: white;
     padding: 14px 16px;
     text-decoration: none;
@@ -121,7 +123,7 @@ html, body {
 
   .dropdown .dropbtn {
     margin: none;
-    font-size: 16px;  
+    font-size: 18px;  
     border: none;
     outline: none;
     color: white;
@@ -244,25 +246,26 @@ html, body {
   
   .headshot {
     float: left;
-    margin-left: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-top: 2%;
-    height: 275px;
-    width: 275px;
+    height: 15vw;
+    /* height: 275px;
+    width: 275px; */
     border-radius: 50%;
     /* display: inline-block; */
   }
 
   .yaboi {
-    font-size: 1em;
+    font-size: .75vw;
     text-align: left;
-    margin-left: 1%;
     word-wrap: break-word;
     position: relative;
     /* display: block; */
     overflow: hidden;
     height: 275px;
     display: table-cell;
-    vertical-align: middle;
+    /* vertical-align: middle; */
   }
 
   .IFE_link {
@@ -433,11 +436,14 @@ html, body {
     }
   }
   
+
+
   @media screen and (max-width:766px) {
     .nav-logo {
       height: 43px;
       padding-bottom: 8px;
     }
+
     .nav-items a{
       display: none;
     }
