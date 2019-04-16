@@ -74,6 +74,7 @@ html, body {
     width: 100%;
     position: fixed;
     overflow: hidden;
+    overflow-y: hidden;
     background-image: none;
     text-align: center;
     z-index: 4;
@@ -249,14 +250,42 @@ html, body {
     background-size: cover;
     z-index: 0;
   }
+
+  .heroImage_ {
+    margin-top: 2%;
+    height: 50vh;
+    position: relative;
+    background: url(../images/drone.jpg) center center;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .heroImage__ {
+    margin-top: 2%;
+    height: 50vh;
+    position: relative;
+    background: url(../images/ife.png) center center;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .heroImage___ {
+    margin-top: 2%;
+    height: 50vh;
+    position: relative;
+    background: url(../images/render.JPG) center center;
+    background-size: cover;
+    z-index: 0;
+  }
   
   .lorem {
     display: inline-block;
   }
 
-  iframe {
-    display: block;
+  .videowrap {
     margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
   }
 
   .video-container {

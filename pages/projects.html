@@ -38,14 +38,14 @@
       <div class="dropdown">
       <a href="projects.html" class="dropbtn">PROJECTS</a>
       <div class="dropdown-content">
-        <a href="#k">S.T.E.V.E.</a>
-        <a href="#l">HackMe</a>
-        <a href="#m">IFE - 2017</a>
-        <a href="#m">IFE - 2018</a>
-        <a href="#m">Project LD</a>
-        <a href="#m">Project HoneyPot</a>
-        <a href="#m">OCR and Dyslexia</a>
-        <a href="#m">Wireless Charger</a>
+        <a href="#STEVE">S.T.E.V.E.</a>
+        <a href="#HACK">HackMe</a>
+        <a href="#IFE0">IFE - 2017</a>
+        <a href="#IFE1">IFE - 2018</a>
+        <a href="#LD">Project LD</a>
+        <a href="#HONEY">Project HoneyPot</a>
+        <a href="#OCR">OCR and Dyslexia</a>
+        <a href="#WIRE">Wireless Charger</a>
       </div>
       </div>
       <a href="resume.html">RESUME</a>
@@ -56,22 +56,121 @@
         <a href="javascript:void(0);" onclick="hamburgerMenu()">≡</a>
       </div>
 
+  <a name="STEVE">
   <h1> S.T.E.V.E. - Self Teaching Elevated Vehicle Entity </h1>
+  </a>
+  <h3> August 2016 - Ongoing </h3>
+  <div class="videowrap">
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/nvighwl_iIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  <h1> HackMe </h1>
+      <iframe style="float:center" class=".video640" width="560" height="315" src="https://www.youtube.com/embed/nvighwl_iIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> 
+  </div>  
 
+  <h3> S.T.E.V.E., also known as the Self Teaching Elevated Vehicle Entity, is a drone that I designed with another student during high school whose primary purpose was to be an aid during diaster relief. 
+       This was a design project that took the entirety of a year and comprises of many features, which are detailed below. This project is still ongoing and progress can be 
+       tracked <u><a href = https://github.com/Batman-wayne/S.T.E.V.E.> here </a></u>.
+  </h3>
+
+  <h3> </h3>
+  <h3> </h3>
+  <h3> Flight controller: Central to this project was a custom flight controller, written from scratch in C. It runs on an ATMEGA328p, the microprocessor found on the Arduino UNO.
+       The flight controller was completed by reading through several online sources and 
+       combining the working parts into the final working controller. Examples such as the bluecopter and various YouTube videos on PID (Proportional-Integral-Derivative) theory were referenced 
+       quite a bit. The single most important sensor on the quadcopter is the triple-axis gyroscope and accelerometer. The module we used (the MPU-6050) is one of the cheapest but still is extremely
+       powerful. Since the MPU-6050 measures angular velocity, we used it to correct flight by correcting any change in angular velocity to the desired angular velocity. For instance, hovering in the 
+       air means an expected angular velocity of zero. The PID controller accounts for past errors by integrating them, but there is unavoidable error and noise which leads to the noise getting 
+       integrated as well, causing the reference angle to drift over time. We fixed this by not taking the raw angular velocity but instead adding a small portion of the acceleration value to get a more
+       consistent value. 
+  </h3>
+
+  <h3> </h3>
+  <h3> </h3>
+  <h3> Camera: We knew we wanted to have a camera onboard the drone, but in order to achieve stable flight, we needed to make sure that the flight controller only handled flight calculations as fast 
+       as possible. The purpose of the camera was to live stream back to the base station, so that emergency responders could observe a location before sending in personnel. We decided to have a 
+       Raspberry Pi 3 running separately from the Arduino, to handle all of the non-flight critical calculations and interactions. We went with the standard 
+       Raspberry Pi 3 camera because of its support and decent quality. We were able to get a live video stream running pretty quickly, and were able to get a 480p stream output to a Google Cardboard
+       headset. </h3>
+
+  <h3> </h3>
+  <h3> </h3>
+  <h3> Speaker: We also wanted to have a speaker that could be used to communicate with a victim in distress. We ran an IBM Watson API to enable natural language capable of talking with a person. 
+       For ease of demonstration, we ran this on an Android smartphone. </h3>
+
+  <h3> </h3>
+  <h3> </h3>
+  <h3> GPS: This logged data for position. We were able to extract and graph coordinates to detail the drone's position in 3 dimensions. </h3>
+  <div class="heroImage_"></div>
+
+  <a name="HACK">
+  <h1 name="HACK"> HackMe </h1>
+  </a>
+  <h3> February - Ongoing </h3>
+  <div class="heroImage"></div>
+
+  <h3>The HackMe project was conceived to bring a previously obscure field right into the consumer's hands: Electroencephalography (EEG waves). While normally used for diagnosing brain disorders (such as epilepsy and seizure-related disorders), there is actually a plethora of information to glean from these EEG waves. In general, everyone's brain will generate miniscule electrical impulses (extremely miniscule, on the order of 50microvolts). By finding the frequency of these waves, we can characterize a person's state. We can go further and apply even more advanced mathematics to figure out the location of these waves.
+
+      The waves are measured from the brain by using non-invasive electrodes. These electrodes are cleverly hidden in our signature product, the HackMe beanie. This beanie, if further developed, would house a small custom PCB that does all the signal processing.
+      
+      After the waves are fully quantized, we can begin doing exciting things like mapping these waves to corresponding thoughts by using advanced learning algorithms and techniques. After enough mappings, thoughts can then be corresponded directly to thoughts through the use of embedded technology and the internet of things (IoT). For instance, if the user wants to turn up the thermostat, the action is complete as soon as the user thinks it because the wave will have been mapped to that action.
+      
+      The project is split up into several parts: The pre-processing side (Taking the signal from the brain all the way to quantizing it), processing (database side), post-processing (advanced analysis techniques on the wave), and the user integration (the website and the IoT interface).
+      
+      In addition, our project aims to be one of the first offering truly open source, anonymous, very readable EEG-wave data for use in studies or any condition. </h3> 
+   
+  <h3></h3> 
+  <h3></h3>
+  <h3> This project was entered in the 2019 Hackathon at the University of Illinois at Urbana-Champaign. It won Caterpillar's and Particle's Design Awards, and was overall a runner-up for the competition.  
+       More information about the competition can be found <u> <a href="https://devpost.com/software/hackme"> here </a></u>.
+  </h3>
+
+  <a name="IFE0">
   <h1> IFE - 2017 </h1>
+  </a>
+  <div class="heroImage__"></div>
+  <h3> I am an active member of Illini Formula Electric (IFE), where we design and build a formula-style electric car from scratch. The club is entirely student run, and we are limited to 300V. In the 
+       summer we compete at the FSAE competition in several events. The battery that our car runs off of is comprised of 336 LiFePO4 cells that are wired together in a series-parallel combination 
+       that yields 300V and 175A overall. The competition rules require us to monitor the temperature and voltage of each battery cell. The old method of doing this was using the Elithion Proprietary 
+       Battery Management System (BMS). This system only runs on very old team laptops, which are archaic, cumbersome, and limited to a hardwire connection. As a freshman, I designed a PCB that could 
+       read data off the CAN bus and then output it over bluetooth to a laptop. 
+  </h3>
 
+  <a name="IFE1">
   <h1> IFE - 2018 </h1>
+  </a>
+  <div class="heroImage___"></div>
+  <h3> 
+    After my first year on IFE, I got promoted to the leader of the Data Acquisition and Quantitative Analysis (DAQA) team, whose primary goal is to log data from all the sensors on the car, timestamp
+    them, and then upload it to a server. It gathers data from 4 accelerometers, 30 strain gauges, a GPS, the position of the steering wheel, the coolant temperature, the brake pressure, the throttle 
+    and regen pedal potentiometer, CAN, hall effect sensors, and the voltage of the low voltage battery pack. 
+  </h3>
 
+  <a name="LD">
   <h1> Project LD </h1>
+  <h3> 
+    After taking ECE 385, my interest in FPGAs and hardware acceleration has been peaked. For our final project, my partner and I decided to make an augmented reality assisted game similar to beer pong.
+    The idea is to hardware accelerate the motion tracking of a bouncing ball and in real time, superimpose the bounce that should have been taken in order to bounce the ball into the cup.
+  </h3>
+  </a>
 
+  <a name="HONEY">
   <h1> Project HoneyPot </h1>
+  <h3> 
+    This is a project inspired by a reddit post. The idea is to setup an SSH server and then wait until bots on the internet try to break in by spamming the default usernames and passwords. 
+    Then, the attempted usernames and passwords and graphed to see which are the most frequent attempts. 
+  </h3>
+  </a>
 
+  <a name="OCR">
   <h1> OCR and Dyslexia </h1>
+  <h3> As part of the 2018 ECE PULSE competition, me and 3 other group members interfaced a Tobii eye tracker with a C# application to assist those with dyslexia. This would operate by using OCR 
+       to analyze when someone is trying to read text on a computer screen and based on how long someone is looking at text, analyze if they are having trouble reading it. Then, it can take the 
+       data and then graph it. We were 2nd place runners up in the competition.     
+  </h3>
+  </a>
 
+  <a name="WIRE">
   <h1> Wireless Charger </h1>
+  </a>
+  <h3> As part of our final project for ECE 110, my partner and I implemented a wireless charger for a smartphone. </h3>
     </div>
 </body>
