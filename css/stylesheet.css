@@ -93,10 +93,21 @@ html, body {
       margin-top: 2%;
       margin-bottom: 10px;
       /* z-index: 0; */
-      /* position: relative; */
+      position: relative;
   }
   
   .nav-items {
+    overflow: hidden;
+    /* position: absolute;
+    left: 50%; 
+    transform: translate(-50%, -50%); */
+    float: center;
+    align-content: center;
+    text-align: center;
+    background-color: #333;
+  }
+
+  .yote {
     overflow: hidden;
     /* position: absolute;
     left: 50%; 
