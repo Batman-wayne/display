@@ -266,7 +266,7 @@ html, body {
     margin-top: 2%;
     height: 50vh;
     position: relative;
-    background: url(../images/drone.jpg) center center;
+    background: url(../images/yote.jpg) center center;
     background-size: cover;
     z-index: 0;
   }
@@ -275,7 +275,7 @@ html, body {
     margin-top: 2%;
     height: 50vh;
     position: relative;
-    background: url(../images/ife.png) center center;
+    background: url(../images/ife_.jpg) center center;
     background-size: cover;
     z-index: 0;
   }
