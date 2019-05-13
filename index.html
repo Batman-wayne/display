@@ -56,7 +56,17 @@
         <a href="javascript:void(0);" onclick="hamburgerMenu()">≡</a>
       </div>
  
+  <div class = "test">
   <div class="heroImage"> </div>
+  </div>  
+
+  <div class = "test">
+      <div class="heroImage_"> </div>
+  </div>  
+
+  <div class = "test">
+  <div class="heroImage__"> </div>
+  </div>    
  
   <div>
     <div class="headshot-align">
@@ -81,4 +91,27 @@
       <a href="https://www.linkedin.com/in/harris-mohamed/"><img src="images/linkedin.png"  class="nav-logo"> </a>
       <a href="https://github.com/Batman-wayne/"> <img src="images/git.png" class="nav-logo"> </a>
     </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("test");
+          // var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          // for (i = 0; i < dots.length; i++) {
+          //   dots[i].className = dots[i].className.replace(" active", "");
+          // }
+          slides[slideIndex-1].style.display = "block";  
+          // dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        </script>
+        
 </body>
