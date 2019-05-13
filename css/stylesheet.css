@@ -271,6 +271,15 @@ html, body {
     z-index: 0;
   }
 
+  .zu {
+    margin-top: 2%;
+    height: 50vh;
+    position: relative;
+    background: url(../images/zu.jpg) center center;
+    background-size: cover;
+    z-index: 0;
+  }
+
   .heroImage__ {
     margin-top: 2%;
     height: 50vh;
