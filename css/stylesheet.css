@@ -307,6 +307,11 @@ html, body {
     overflow:hidden;
   }
   
+  iframe {
+    margin: auto;
+    display: block;
+  }
+
   .video-container iframe, .video-container object, .video-container embed {
     position:absolute;
     top:0;
