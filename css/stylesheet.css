@@ -262,6 +262,11 @@ html, body {
     z-index: 0;
   }
 
+  .project-info {
+    color: white;
+    font-size: 1.3em;
+  }
+
   .heroImage_ {
     margin-top: 2%;
     height: 50vh;
@@ -275,7 +280,7 @@ html, body {
     margin-top: 2%;
     height: 50vh;
     position: relative;
-    background: url(../images/zu.jpg) center center;
+    background: url(../images/zu_.jpg) center center;
     background-size: cover;
     z-index: 0;
   }
@@ -330,11 +335,12 @@ html, body {
   }
 
   .headshot {
-    float: left;
+    /* float: left; */
     margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 2%;
-    height: 15vw;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 0 auto;
+    /* height: 15vw; */
     /* height: 275px;
     width: 275px; */
     border-radius: 50%;
@@ -345,13 +351,19 @@ html, body {
     font-size: .75vw;
     text-align: left;
     word-wrap: break-word;
-    position: relative;
+    /* position: relative; */
     /* display: block; */
     overflow: hidden;
-    height: 275px;
+    height: 200px;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
   }
+
+  .design{
+    /* font-size: 11px; */
+    font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
+    display: inline-block;
+    }
 
   .IFE_link {
    color: white;
@@ -528,6 +540,17 @@ html, body {
       height: 43px;
       padding-bottom: 8px;
     }
+
+    .fix{
+      width: 100%;
+      text-align: center;
+    }
+
+    .design{
+      /* font-size: 11px; */
+      font-size: 10px;
+      display: inline-block;
+      }
 
     .nav-items a{
       display: none;
