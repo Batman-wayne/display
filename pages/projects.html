@@ -62,31 +62,24 @@
   <h3 style="color:silver"> August 2016 - Ongoing </h3>
   <div class="heroImage_"></div>
 
+  <br>
+
   <p class="project-info"> S.T.E.V.E., also known as the Self Teaching Elevated Vehicle Entity, is a drone that I designed with another student during high school whose primary purpose was to be an aid during diaster relief. 
        This was a design project that took the entirety of a year and comprises of many features, which are detailed below. This project is still ongoing and progress can be 
        tracked <u><a href = https://github.com/Batman-wayne/S.T.E.V.E.> here </a></u>.
   </p>
 
-  <h4> Flight controller: Central to this project was a custom flight controller, written from scratch in C. It runs on an ATMEGA328p, the microprocessor found on the Arduino UNO.
-       The flight controller was completed by reading through several online sources and 
-       combining the working parts into the final working controller. Examples such as the bluecopter and various YouTube videos on PID (Proportional-Integral-Derivative) theory were referenced 
-       quite a bit. The single most important sensor on the quadcopter is the triple-axis gyroscope and accelerometer. The module we used (the MPU-6050) is one of the cheapest but still is extremely
-       powerful. Since the MPU-6050 measures angular velocity, we used it to correct flight by correcting any change in angular velocity to the desired angular velocity. For instance, hovering in the 
-       air means an expected angular velocity of zero. The PID controller accounts for past errors by integrating them, but there is unavoidable error and noise which leads to the noise getting 
-       integrated as well, causing the reference angle to drift over time. We fixed this by not taking the raw angular velocity but instead adding a small portion of the acceleration value to get a more
-       consistent value. 
-  </h4>
+  <p class="project-info">The goal of the entire project was to create an autonomous drone that could serve as an aid immediately following extreme situations such as natural disasters. The drone is meant to be a means of surveying a possibily dangerous region before sending in a first responder. To accomplish this, we made a fully featured drone with a custom flight controller, camera to view the surroundings and live stream it to a virtual reality headset (to stream back to a base station so that they can see what the enviroment is like), speaker with onboard AI to communicate to a victim of a natural disaster, and sensors to make sure it is not flying into any object as well as update location. </p>
 
-  <h4> Camera: We knew we wanted to have a camera onboard the drone, but in order to achieve stable flight, we needed to make sure that the flight controller only handled flight calculations as fast 
-       as possible. The purpose of the camera was to live stream back to the base station, so that emergency responders could observe a location before sending in personnel. We decided to have a 
-       Raspberry Pi 3 running separately from the Arduino, to handle all of the non-flight critical calculations and interactions. We went with the standard 
-       Raspberry Pi 3 camera because of its support and decent quality. We were able to get a live video stream running pretty quickly, and were able to get a 480p stream output to a Google Cardboard
-       headset. </h4>
+  <p class="project-info"> <u> Flight controller: </u> The most crucial part of this project was the custom flight controller. In most drone builds, it is easiest to buy an off-the-shelf flight controller that takes care of all the flight algorithms for you and all you have to do is plug in your motors and battery to get it working. However, we thought it would be better as a learning experience if we implemented the flight controller on our own from scratch. We did this using an Arduino UNO as our microcontroller and a gyroscope/accelerometer as our Inertial Measurement Unit (IMU). We used an MPU-6050 for the gyroscope/accelerometer. After this, we used a PID controller to realize our flight controller. This took a bulk of our school year and ultimately ended up being a success, as we were able to fly the drone at the end of the semester.</p>
 
-  <h4> Speaker: We also wanted to have a speaker that could be used to communicate with a victim in distress. We ran an IBM Watson API to enable natural language capable of talking with a person. 
-       For ease of demonstration, we ran this on an Android smartphone. </h4>
+  <p class="project-info"> <u> Camera and Virtual Reality Headset: </u> The camera was interfaced on a Raspberry Pi 3. This was done because with all of our focus on the flight controller, the Raspberry Pi's included code to get the camera running expedited our production time. Getting the camera to output a video feed was very easy, but we wanted to go even further and interface a virtual reality headset. We were able to exploit VLC Media player to prove the concept of live streaming a video feed pretty easily, but the problem was the virtual reality. We developed an app that allowed us to prototype Google Cardboard applications. We did not reach the end goal of live streaming to the headset, but all of the pieces are in place and with more time we could absolutely get the interface working. </p>
 
-  <h4> GPS: This logged data for position. We were able to extract and graph coordinates to detail the drone's position in 3 dimensions. </h4>
+  <p class="project-info"> <u>Speaker and AI:</u> Since we used a Raspberry Pi for all non-flight critical functions, it was extremely easy to add a speaker to the Pi because there is an audio out jack on the Pi. The initial thought was to use simple if-else constructs and hard-code the speaker outputs (i.e. "Help is on the way"), but then we had the idea of using IBM AI APIs to get a natural language output from the Raspberry Pi. After struggling for a few weeks with the IBM documentation, we contacted them and they sent us a sample Android app that used their APIs. After this, it was easy to link this with the Raspberry Pi and output it through the speaker. We coded some very simple outputs and trained the AI to be as helpful as possible in the relevant situation. </p>
+
+  <p class="project-info"> <u> Object detection and location updates: </u> One fundamental aspect of a drone is to... not fly into nearby objects. While real drones use laser-detection to detect nearby objects, those sensors are expensive and difficult to get working, so we chose to use ultrasonic sensors. Our end goal was 6 sensors in each axis, 3 in each direction (for instance we would have 3 pointing directly upwards and 3 pointing directly downwards, thus covering the z-axis). We used the MUX shield, which adds 27 additional inputs to the Arduino and we ended up writing our own custom drivers for all the ultrasonic values. It fully worked, but we did not get to interface it with the rest of the drone. However, given more time, we could have easily gotten this functionality working. We also added an off-the-shelf GPS module, which was capable of logging the coordinates. Combined with the ultrasonic sensor data, we have 3D-coordinates. </p>
+
+  <p class="project-info"> <u> Flying forward: </u> This project was ultimately a success. It was presented to Navistar at an engineering expo and met with high praise. This project is still in progress, with plans to remove the entire top enclosure and replace it with a custom PCB. </p>
 
   <div class="videowrap">
       <div class="video-container">
@@ -99,18 +92,33 @@
   <h3 style="color:silver"> February - Ongoing </h3>
   <div class="heroImage"></div>
 
-  <h3>The HackMe project was conceived to bring a previously obscure field right into the consumer's hands: Electroencephalography (EEG waves). While normally used for diagnosing brain disorders (such as epilepsy and seizure-related disorders), there is actually a plethora of information to glean from these EEG waves. In general, everyone's brain will generate miniscule electrical impulses (extremely miniscule, on the order of 50microvolts). By finding the frequency of these waves, we can characterize a person's state. We can go further and apply even more advanced mathematics to figure out the location of these waves.
+  <p class="project-info">The HackMe project was conceived to bring a previously obscure field right into the consumer's hands: Electroencephalography (EEG waves). While normally used for diagnosing brain disorders (such as epilepsy and seizure-related disorders), there is actually a plethora of information to glean from these EEG waves. In general, everyone's brain will generate miniscule electrical impulses (extremely miniscule, on the order of 50microvolts). By finding the frequency of these waves, we can characterize a person's state. We can go further and apply even more advanced mathematics to figure out the location of these waves.
 
-      The waves are measured from the brain by using non-invasive electrodes. These electrodes are cleverly hidden in our signature product, the HackMe beanie. This beanie, if further developed, would house a small custom PCB that does all the signal processing.
-      
-      After the waves are fully quantized, we can begin doing exciting things like mapping these waves to corresponding thoughts by using advanced learning algorithms and techniques. After enough mappings, thoughts can then be corresponded directly to thoughts through the use of embedded technology and the internet of things (IoT). For instance, if the user wants to turn up the thermostat, the action is complete as soon as the user thinks it because the wave will have been mapped to that action.
-      
-      The project is split up into several parts: The pre-processing side (Taking the signal from the brain all the way to quantizing it), processing (database side), post-processing (advanced analysis techniques on the wave), and the user integration (the website and the IoT interface).
-      
-      In addition, our project aims to be one of the first offering truly open source, anonymous, very readable EEG-wave data for use in studies or any condition. </h3> 
+  The waves are measured from the brain by using non-invasive electrodes. These electrodes are cleverly hidden in our signature product, the HackMe beanie. This beanie, if further developed, would house a small custom PCB that does all the signal processing.
+  
+  After the waves are fully quantized, we can begin doing exciting things like mapping these waves to corresponding thoughts by using advanced learning algorithms and techniques. After enough mappings, thoughts can then be corresponded directly to thoughts through the use of embedded technology and the internet of things (IoT). For instance, if the user wants to turn up the thermostat, the action is complete as soon as the user thinks it because the wave will have been mapped to that action.
+  
+  The project is split up into several parts: The pre-processing side (Taking the signal from the brain all the way to quantizing it), processing (database side), post-processing (advanced analysis techniques on the wave), and the user integration (the website and the IoT interface).
+  
+  In addition, our project aims to be one of the first offering truly open source, anonymous, very readable EEG-wave data for use in studies or any condition. We had great detail in finding resources to start</p> 
+
+  <p class="project-info"> <u> Wave extraction: </u> The fundamental problem with a wave as small as the electrical ones from the exterior of the brain is how miniscule they are. We began by coming up with a way to accurately read these waves. We used a 24 bit ADC (Analog-to-Digital converter) to accurately read the incoming waves. Once on a microcontroller, these waves can be stored and sent anywhere. For HackIllinois 2019, we had a Raspberry Pi 3 take these signals and upload them to a database. </p> 
+
+  <p class="project-info" >To host our data, we chose to use an Azure database as we get free access to it. The database can be written to and queried very easily, and separates all the data according to whether it is private patient data or part of the open source set.</p>
+  <!-- <p class="project-info"> <u> Database management: </u> Since we are all college students, we get a certain amount of free Microsoft Azure credit. We spent a large amount of hours initializing databases on Azure. The goal was 2 distinct databases: One for an open-source log of EEG data, and another for a customer's data to be logged. The idea for the first database came when we initially got brainwave data and we wanted to ensure that the data was valid, so we went looking for sample EEG-wave datasets. Unfortunately, we had an extremely tough time due to very poor documentation in uobscure file formats. The idea was to make an open-source database for EEG-wave data that would be well-documented and easy to pull from. The other database revolved around the idea that what we were making was a consumer project: having a constant log of people's EEG-wave data could be amazing for the person who's wave is being logged, since any anomalies could be detected and then the user could be informed. This arises from the fact that EEG-wave data can be used to diagnose sleep and brain disorders. </p>  -->
+<div class = "project-info">
+  <p > <u> Post-processing: </u> This is done through Matlab, using some of their built in models. After post processing is done, the type of wave which was encounted is pushed back to the server. Some of the most common EEG waves:
+    <li> 
+   <ul> Delta (3 Hz): Most commonly found in deep cycles of sleep.</ul>
+    <ul> Theta (3.5 to 7 Hz): Most commonly found in children. Implies an abnormality in the person if they are an adult.</ul>
+    <ul> Alpha (7.5 to 13 Hz): Most commonly found in people who are relaxing and is eradicated by any deep concentration.</ul>
+   <ul> Beta: (14 - 38 Hz): Most commonly found in people who are thinking a lot of thoughts at once. </ul>
+   <ul> Gamma: (38 - 42 Hz): Greater than the frequency of neuronal firing, gamma waves relate to processing of different brain areas at once.</ul>
+  </li>
+    The code is currently being ported over to Python.</p> 
+  </div>
+  <p class="project-info"> <u> Applications: </u> </p> 
    
-  <h3></h3> 
-  <h3></h3>
   <h3> This project was entered in the 2019 Hackathon at the University of Illinois at Urbana-Champaign. It won Caterpillar's and Particle's Design Awards, and was overall a runner-up for the competition.  
        More information about the competition can be found <u> <a href="https://devpost.com/software/hackme"> here </a></u>.
   </h3>
