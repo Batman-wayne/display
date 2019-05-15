@@ -267,6 +267,12 @@ html, body {
     font-size: 1.3em;
   }
 
+  .wave-info {
+    color: white;
+    font-size: 1.3em;
+    display: list-item;
+  }
+
   .heroImage_ {
     margin-top: 2%;
     height: 50vh;
@@ -346,6 +352,7 @@ html, body {
     border-radius: 50%;
     /* display: inline-block; */
   }
+
 
   .yaboi {
     font-size: .75vw;

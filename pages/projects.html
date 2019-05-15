@@ -73,11 +73,17 @@
 
   <p class="project-info"> <u> Flight controller: </u> The most crucial part of this project was the custom flight controller. In most drone builds, it is easiest to buy an off-the-shelf flight controller that takes care of all the flight algorithms for you and all you have to do is plug in your motors and battery to get it working. However, we thought it would be better as a learning experience if we implemented the flight controller on our own from scratch. We did this using an Arduino UNO as our microcontroller and a gyroscope/accelerometer as our Inertial Measurement Unit (IMU). We used an MPU-6050 for the gyroscope/accelerometer. After this, we used a PID controller to realize our flight controller. This took a bulk of our school year and ultimately ended up being a success, as we were able to fly the drone at the end of the semester.</p>
 
+  <p style="text-align:center" ><img src="../images/PID.PNG" height="460px" width="1114px"></img></p>
+  <p style="text-align:center" class="project-info"> <em> Initial proof-of-concept calculations for PID controller</em></p>
+
   <p class="project-info"> <u> Camera and Virtual Reality Headset: </u> The camera was interfaced on a Raspberry Pi 3. This was done because with all of our focus on the flight controller, the Raspberry Pi's included code to get the camera running expedited our production time. Getting the camera to output a video feed was very easy, but we wanted to go even further and interface a virtual reality headset. We were able to exploit VLC Media player to prove the concept of live streaming a video feed pretty easily, but the problem was the virtual reality. We developed an app that allowed us to prototype Google Cardboard applications. We did not reach the end goal of live streaming to the headset, but all of the pieces are in place and with more time we could absolutely get the interface working. </p>
 
   <p class="project-info"> <u>Speaker and AI:</u> Since we used a Raspberry Pi for all non-flight critical functions, it was extremely easy to add a speaker to the Pi because there is an audio out jack on the Pi. The initial thought was to use simple if-else constructs and hard-code the speaker outputs (i.e. "Help is on the way"), but then we had the idea of using IBM AI APIs to get a natural language output from the Raspberry Pi. After struggling for a few weeks with the IBM documentation, we contacted them and they sent us a sample Android app that used their APIs. After this, it was easy to link this with the Raspberry Pi and output it through the speaker. We coded some very simple outputs and trained the AI to be as helpful as possible in the relevant situation. </p>
 
   <p class="project-info"> <u> Object detection and location updates: </u> One fundamental aspect of a drone is to... not fly into nearby objects. While real drones use laser-detection to detect nearby objects, those sensors are expensive and difficult to get working, so we chose to use ultrasonic sensors. Our end goal was 6 sensors in each axis, 3 in each direction (for instance we would have 3 pointing directly upwards and 3 pointing directly downwards, thus covering the z-axis). We used the MUX shield, which adds 27 additional inputs to the Arduino and we ended up writing our own custom drivers for all the ultrasonic values. It fully worked, but we did not get to interface it with the rest of the drone. However, given more time, we could have easily gotten this functionality working. We also added an off-the-shelf GPS module, which was capable of logging the coordinates. Combined with the ultrasonic sensor data, we have 3D-coordinates. </p>
+
+  <p style="text-align:center" ><img src="../images/GPS.PNG" height="347px" width="595px"></img></p>
+  <p style="text-align:center" class="project-info"> <em> Overlay of GPS location data for a few test flights near school</em></p>
 
   <p class="project-info"> <u> Flying forward: </u> This project was ultimately a success. It was presented to Navistar at an engineering expo and met with high praise. This project is still in progress, with plans to remove the entire top enclosure and replace it with a custom PCB. </p>
 
@@ -94,30 +100,31 @@
 
   <p class="project-info">The HackMe project was conceived to bring a previously obscure field right into the consumer's hands: Electroencephalography (EEG waves). While normally used for diagnosing brain disorders (such as epilepsy and seizure-related disorders), there is actually a plethora of information to glean from these EEG waves. In general, everyone's brain will generate miniscule electrical impulses (extremely miniscule, on the order of 50microvolts). By finding the frequency of these waves, we can characterize a person's state. We can go further and apply even more advanced mathematics to figure out the location of these waves.
 
-  The waves are measured from the brain by using non-invasive electrodes. These electrodes are cleverly hidden in our signature product, the HackMe beanie. This beanie, if further developed, would house a small custom PCB that does all the signal processing.
+   Our project was the HackMe beanie. This beanie, if further developed, would house a small custom PCB that does all the wave extraction and signal processing.
   
-  After the waves are fully quantized, we can begin doing exciting things like mapping these waves to corresponding thoughts by using advanced learning algorithms and techniques. After enough mappings, thoughts can then be corresponded directly to thoughts through the use of embedded technology and the internet of things (IoT). For instance, if the user wants to turn up the thermostat, the action is complete as soon as the user thinks it because the wave will have been mapped to that action.
+  After the waves are fully quantized, we can begin doing exciting things like mapping these waves to corresponding thoughts by using advanced machine learning algorithms and techniques. After enough mappings, thoughts can then be corresponded directly to thoughts through the use of embedded technology and the internet of things (IoT). For instance, if the user wants to turn up the thermostat, the action is complete as soon as the user thinks it because the wave will have been mapped to that action.
   
   The project is split up into several parts: The pre-processing side (Taking the signal from the brain all the way to quantizing it), processing (database side), post-processing (advanced analysis techniques on the wave), and the user integration (the website and the IoT interface).
   
   In addition, our project aims to be one of the first offering truly open source, anonymous, very readable EEG-wave data for use in studies or any condition. We had great detail in finding resources to start</p> 
 
-  <p class="project-info"> <u> Wave extraction: </u> The fundamental problem with a wave as small as the electrical ones from the exterior of the brain is how miniscule they are. We began by coming up with a way to accurately read these waves. We used a 24 bit ADC (Analog-to-Digital converter) to accurately read the incoming waves. Once on a microcontroller, these waves can be stored and sent anywhere. For HackIllinois 2019, we had a Raspberry Pi 3 take these signals and upload them to a database. </p> 
+  <p class="project-info"> <u> Wave extraction and Pre-processing: </u> The fundamental problem with a wave as small as the electrical ones from the exterior of the brain is how miniscule they are. The waves are measured from the brain by using non-invasive electrodes. They are then fed into a 24 bit ADC (Analog-to-Digital converter) to accurately read the incoming waves. Once on a microcontroller, these waves can be stored and sent anywhere. For HackIllinois 2019, we had a Raspberry Pi 3 take these signals and upload them to a database. </p> 
 
-  <p class="project-info" >To host our data, we chose to use an Azure database as we get free access to it. The database can be written to and queried very easily, and separates all the data according to whether it is private patient data or part of the open source set.</p>
-  <!-- <p class="project-info"> <u> Database management: </u> Since we are all college students, we get a certain amount of free Microsoft Azure credit. We spent a large amount of hours initializing databases on Azure. The goal was 2 distinct databases: One for an open-source log of EEG data, and another for a customer's data to be logged. The idea for the first database came when we initially got brainwave data and we wanted to ensure that the data was valid, so we went looking for sample EEG-wave datasets. Unfortunately, we had an extremely tough time due to very poor documentation in uobscure file formats. The idea was to make an open-source database for EEG-wave data that would be well-documented and easy to pull from. The other database revolved around the idea that what we were making was a consumer project: having a constant log of people's EEG-wave data could be amazing for the person who's wave is being logged, since any anomalies could be detected and then the user could be informed. This arises from the fact that EEG-wave data can be used to diagnose sleep and brain disorders. </p>  -->
-<div class = "project-info">
-  <p > <u> Post-processing: </u> This is done through Matlab, using some of their built in models. After post processing is done, the type of wave which was encounted is pushed back to the server. Some of the most common EEG waves:
-    <li> 
-   <ul> Delta (3 Hz): Most commonly found in deep cycles of sleep.</ul>
-    <ul> Theta (3.5 to 7 Hz): Most commonly found in children. Implies an abnormality in the person if they are an adult.</ul>
-    <ul> Alpha (7.5 to 13 Hz): Most commonly found in people who are relaxing and is eradicated by any deep concentration.</ul>
-   <ul> Beta: (14 - 38 Hz): Most commonly found in people who are thinking a lot of thoughts at once. </ul>
-   <ul> Gamma: (38 - 42 Hz): Greater than the frequency of neuronal firing, gamma waves relate to processing of different brain areas at once.</ul>
-  </li>
-    The code is currently being ported over to Python.</p> 
-  </div>
-  <p class="project-info"> <u> Applications: </u> There is a website where a consumer can view their EEG-wave data as well as what it means (which is output from our algorithms). The same information is also available on an app. The final part of this project is interacting the outputs from this project to devices using the Internet of Things, such as turning on a thermostat with your mind. </p> 
+  <p style="text-align:center" ><img src="../images/EEG.PNG" height="347px" width="595px"></img></p>
+  <p style="text-align:center" class="project-info"> <em> Raw reading of the EEG headset output</em></p>
+
+  <p class="project-info" >To host our data, we chose to use an Azure database as we get free access to it (college students get an ample amount of free credits). We made 2 distinct databases: One for an open-source log of EEG data, and another for a customer's personal data to be logged. When we initially got brainwave data, we wanted to ensure that the data was valid, so we went looking for sample EEG-wave datasets to compare against. Unfortunately, we had an extremely tough time due to very poor file documentation and uobscure file formats. The idea was to make an open-source database for EEG-wave data that would be well-documented and easy to pull from. Other developers could then work on algorithms to better understand the data, as this is a relatively new field. In turn, the algorithms developed from the open-source set could be applied to the private user data to detect any anomalies, such as sleep and brain disorders. </p>
+
+  <p class = "project-info"> <u> Post-processing: </u> This is done through Matlab, using some of their built in models. We initially used a linear classifier and are currently in progress developing a machine learning algorithm to better classify the data. After post processing is done, the type of wave which was encounted is pushed back to the database. Some of the most common EEG waves: </p>
+    <ul> 
+   <li class = "wave-info"> Delta (3 Hz): Most commonly found in deep cycles of sleep.</li>
+    <li class = "wave-info"> Theta (3.5 to 7 Hz): Most commonly found in children. Implies an abnormality in the person if they are an adult.</li>
+    <li class = "wave-info"> Alpha (7.5 to 13 Hz): Most commonly found in people who are relaxing and is eradicated by any deep concentration.</li>
+   <li class = "wave-info"> Beta: (14 - 38 Hz): Most commonly found in people who are thinking a lot of thoughts at once. </li>
+   <li class = "wave-info"> Gamma: (38 - 42 Hz): Greater than the frequency of neuronal firing, gamma waves relate to processing of different brain areas at once.</li>
+    </ul>
+  <p class = "project-info"> The code is currently being ported over to Python.</p> 
+  <p class="project-info"> <u> Applications: </u> We had 3 primary applications of the data: a website, an app, and an IoT application. The website and app were designed similar to a health portal, and allowed you to view you EEG-wave data at a glance. For our IoT application, we chose to correlate a mood to music. Once the algorithm on the database has output what kind of wave it is, we have it play a song from a specific playlist. </p> 
    
   <p class="project-info"> This project was entered in the 2019 Hackathon at the University of Illinois at Urbana-Champaign. It won Caterpillar's and Particle's Design Awards, and was overall a runner-up for the competition.  
        More information about the competition can be found <u> <a href="https://devpost.com/software/hackme"> here </a></u>.
@@ -127,52 +134,85 @@
   <h1 style="color:orange"> IFE - 2017 </h1>
   </a>
   <div class="heroImage__"></div>
-  <h3> I am an active member of Illini Formula Electric (IFE), where we design and build a formula-style electric car from scratch. The club is entirely student run, and we are limited to 300V. In the 
+  <p class = "project-info"> I am an active member of Illini Formula Electric (IFE), where we design and build a formula-style electric car from scratch. The club is entirely student run. We are limited to 300V. In the 
        summer we compete at the FSAE competition in several events. The battery that our car runs off of is comprised of 336 LiFePO4 cells that are wired together in a series-parallel combination 
        that yields 300V and 175A overall. The competition rules require us to monitor the temperature and voltage of each battery cell. The old method of doing this was using the Elithion Proprietary 
        Battery Management System (BMS). This system only runs on very old team laptops, which are archaic, cumbersome, and limited to a hardwire connection. As a freshman, I designed a PCB that could 
        read data off the CAN bus and then output it over bluetooth to a laptop. 
-  </h3>
+  </p>
 
+  <p class = "project-info"> In addition, I also developed a GUI that was capable of outputting the data in realtime. This was done in C# using the .NET framework.</p>
+
+
+  <p style="text-align:center" ><img src="../images/DATA.PNG" height="608px" width="1285px"></img></p>
+    <p style="text-align:center" class="project-info"> <em> Graph of collected data and screenshot of developed GUI</em></p>
   <a name="IFE1">
   <h1 style="color:orange"> IFE - 2018 </h1>
   </a>
   <div class="heroImage___"></div>
-  <h3> 
+  <p class = "project-info"> 
     After my first year on IFE, I got promoted to the leader of the Data Acquisition and Quantitative Analysis (DAQA) team, whose primary goal is to log data from all the sensors on the car, timestamp
     them, and then upload it to a server. It gathers data from 4 accelerometers, 30 strain gauges, a GPS, the position of the steering wheel, the coolant temperature, the brake pressure, the throttle 
     and regen pedal potentiometer, CAN, hall effect sensors, and the voltage of the low voltage battery pack. 
-  </h3>
+  </p>
+
+  <p class = "project-info"> 
+      The final system is currently being worked on. We designed our system to be custom PCB shields that plug directly into a Raspberry Pi. There are 4 corner boards and 1 central board, which then all upload their data to our servers for later analysis.  
+    </p>
+
+  <p style="text-align:center" ><img src="../images/VIZ.PNG" height="813px" width="810px"></img></p>
+    <p style="text-align:center" class="project-info"> <em> Graph of collected data from preliminary testing </em></p>
 
   <a name="LD">
   <h1 style="color:orange"> Project LD </h1>
-  <h3> 
+  <p class = "project-info">  
     After taking ECE 385, my interest in FPGAs and hardware acceleration has been peaked. For our final project, my partner and I decided to make an augmented reality assisted game similar to beer pong.
-    The idea is to hardware accelerate the motion tracking of a bouncing ball and in real time, superimpose the bounce that should have been taken in order to bounce the ball into the cup.
-  </h3>
+    The idea is to hardware accelerate the motion tracking of a bouncing ball and in real time, superimpose the bounce that should have been taken in order to bounce the ball into the cup. The project is named "Project LD", which is short for "Projects Legends Never Die", which is a nod to our professor, whose profile picture on our class website is the "Legends Never Die" meme.
+  </p>
+
+  <p class = "project-info">  
+      In order to do this, we had to write our own custom camera drivers for use with our FPGA. We were provided with the Altera Cyclone IV E FPGA on the DE2-115 expansion board. We were also provided with the 1.3 megapixel camera module, but unfortunately, the 1.3 megapixel camera has no sample code for the Altera Cyclone IV E.
+    </p>
+
+    <p class = "project-info">  
+        We weren't able to get to 3D motion tracking, but we were able to get a successful 2D motion track. This was done very similar to how Adobe After Effects does its motion tracking, using the principle of tracking a high contrast point to keep track of an object. Using this, we were able to track position and scale of a ball pretty easily. Real motion trackers also keep track of rotation, but we didn't need to worry about this because we were tracking a ball. 
+      </p>
+
+      <p class = "project-info">  
+          The last leg of this project would have been exploiting constraints to get a 3D motion track with one camera. There are a few additional things we would have to do. 
+        </p>
+      
+        <p style="text-align:center" ><img src="../images/zu.jpg" height="571px" width="1015px"></img></p>
+    <p style="text-align:center" class="project-info"> <em> Demo of final project: (From left to right) Professor Zuofu, lab partner and I, lab TA </em></p>
   </a>
 
   <a name="HONEY">
   <h1 style="color:orange"> Project HoneyPot </h1>
-  <h3> 
-    This is a project inspired by a reddit post. The idea is to setup an SSH server and then wait until bots on the internet try to break in by spamming the default usernames and passwords. 
-    Then, the attempted usernames and passwords and graphed to see which are the most frequent attempts. 
-  </h3>
+  <p class = "project-info">  
+    This is a project inspired by a reddit post. The idea is to setup a server and then wait until bots on the internet try to break in by spamming the default usernames and passwords. 
+    Then, the attempted usernames and passwords and graphed to see which are the most frequent attempts. This project will be updated soon.
+  </p>
   </a>
 
   <a name="OCR">
   <h1 style="color:orange"> OCR and Dyslexia </h1>
-  <h3> As part of the 2018 ECE PULSE competition, me and 3 other group members interfaced a Tobii eye tracker with a C# application to assist those with dyslexia. This would operate by using OCR 
+  <p class = "project-info">  As part of the 2018 ECE PULSE competition, me and 3 other group members interfaced a Tobii eye tracker with a C# application to assist those with dyslexia. This would operate by using OCR 
        to analyze when someone is trying to read text on a computer screen and based on how long someone is looking at text, analyze if they are having trouble reading it. Then, it can take the 
-       data and then graph it. We were 2nd place runners up in the competition.     
-  </h3>
+       data and then graph it. We were 2nd place runners up in the competition.      
+  </p>
   </a>
 
   <a name="WIRE">
   <h1 style="color:orange"> Wireless Charger </h1>
   </a>
-  <h3> As part of our final project for ECE 110, my partner and I implemented a wireless charger for a smartphone. </h3>
+  <p class = "project-info"> As part of our final project for ECE 110, my partner and I implemented a wireless charger from scratch to charge a smartphone. We utilized concepts from Physics 212 (Electricity and Magnetism) and ECE 210 (Analog Signal Processing). It primarily used the principle of a transformer to transmit the energy wirelessly. We used magnet wire to make the transmitter and reciever coils. The transmitter coil used was hooked up to a function generator which generated a sine wave. The reciever coil then took the signal and passed it through a full bridge rectifier to get a DC wave. Finally, it was passed into a voltage regulator to get 5V out. Unfortunately, the current output was only 400mA, which was enough to charge a phone (however, it was enough for the phone to pop up a message "Unrecognized device plugged in").</p>
+  <div class="videowrap">
+      <div class="video-container">
+        <iframe style="float:center" class=".video640" width="560" height="315" src="https://www.youtube.com/embed/yVYdSB_u2pQ"" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div> 
+    </div> 
     </div>
+
     <div class="iconAlign">
         <a href="https://www.facebook.com/profile.php?id=100006672434942"> <img src="../images/facebook.png"  class="nav-logo"> </a>
         <a href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ?view_as=subscriber"> <img src="../images/youtube.png"  class="nav-logo"> </a>
