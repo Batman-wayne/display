@@ -1,129 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-140232502-1');
-</script>
+    <!-- Google Analytics attempt -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  <!-- Basic Page Setup -->
-  <meta charset="utf-8">
-  <title>Harris Mohamed</title>
-  <meta name="description" content="The official website of Harris Mohamed">
-  <meta name="author" content="Harris Mohamed">
- 
-  <!-- Mobile Tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <!-- CSS links -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/stylesheet.css">
- 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700" rel="stylesheet">
- 
-  <!-- JS Links-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
- 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/git.png">
- 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140232502-1');
+    </script>
+
+    <!-- Basic Page Setup -->
+    <meta charset="utf-8">
+    <title>Harris Mohamed</title>
+    <meta name="description" content="The official website of Harris Mohamed">
+    <meta name="author" content="Harris Mohamed">
+
+    <!-- Mobile Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700" rel="stylesheet">
+
+    <!-- JS Links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/git.png">
+
 </head>
+
 <body>
- 
- 
-  <!-- Primary Page Layout -->
-<div class="container-fluid">
-  <div class = "header"> HARRIS MOHAMED</div>
-    <div class="nav-items" id="nav-items">
-      <div class="encapsulate">
-      <a href="index.html">HOME</a>
-      <div class="dropdown">
-      <a href="pages/projects.html" class="dropbtn">PROJECTS</a>
-      <div class="dropdown-content">
-        <a href="pages/projects.html#STEVE">S.T.E.V.E.</a>
-        <a href="pages/projects.html#HACK">HackMe</a>
-        <a href="pages/projects.html#IFE0">IFE - 2017</a>
-        <a href="pages/projects.html#IFE1">IFE - 2018</a>
-        <a href="pages/projects.html#LD">Project LD</a>
-        <a href="pages/projects.html#HONEY">Project HoneyPot</a>
-        <a href="pages/projects.html#OCR">OCR and Dyslexia</a>
-        <a href="pages/projects.html#WIRE">Wireless Charger</a>
-      </div>
-      </div>
-      <a href="pages/resume.html">RESUME</a>
-      <a href="pages/contact.html">ABOUT/CONTACT</a>
+
+    <!-- Primary Page Layout -->
+    <div class="container-fluid">
+        <div class="header"> HARRIS MOHAMED</div>
+
+        <!-- Each item in the navigation row is here -->
+        <div class="nav-items" id="nav-items">
+            <div class="encapsulate">
+                <a href="index.html">HOME</a>
+
+                <!-- Dropdown options -->
+                <div class="dropdown">
+                    <a href="pages/projects.html" class="dropbtn">PROJECTS</a>
+                    <div class="dropdown-content">
+                        <a href="pages/projects.html#STEVE">S.T.E.V.E.</a>
+                        <a href="pages/projects.html#HACK">HackMe</a>
+                        <a href="pages/projects.html#IFE0">IFE - 2017</a>
+                        <a href="pages/projects.html#IFE1">IFE - 2018</a>
+                        <a href="pages/projects.html#LD">Project LD</a>
+                        <a href="pages/projects.html#HONEY">Project HoneyPot</a>
+                        <a href="pages/projects.html#OCR">OCR and Dyslexia</a>
+                        <a href="pages/projects.html#WIRE">Wireless Charger</a>
+                    </div>
+                </div>
+                <a href="pages/resume.html">RESUME</a>
+                <a href="pages/contact.html">ABOUT/CONTACT</a>
+            </div>
+        </div>
+
+        <!-- The hamburger menu icon in the upper right -->
+        <div class="nav-items hamburgerIcon">
+            <a href="javascript:void(0);" onclick="hamburgerMenu()">≡</a>
+        </div>
+
+        <!-- Each image in the slideshow -->
+        <div class="slideshow-image">
+            <div class="heroImage"> </div>
+        </div>
+
+        <div class="slideshow-image">
+            <div class="electric"> </div>
+        </div>
+
+        <div class="slideshow-image">
+            <div class="steve"> </div>
+        </div>
+
+        <div class="slideshow-image">
+            <div class="zuofu-crop"> </div>
+        </div>
+
+        <div>
+            <p class="headshot-mobile" style="float:left; position:relative"><img class="headshot" src="images/helmet.jpg" height="200px" width="200px" border="1px" margin="10px"></p>
+            <div class="main-layout" style="display:table-cell; vertical-align:top;word-wrap: break-word;">
+                <h3>
+                  <ul>
+                    <li> Education: Sophomore seeking M.S. in Computer Engineering </li>
+                    <li> Academic Interests: FPGA development, hardware acceleration, system-on-chip (SoC) systems, embedded systems, and machine learning </li>
+                    <li> Organizations: Heavily involved in <a href="https://www.illiniracing.xyz" target="_blank" class = "IFE_link">  Illini Formula Electric </a>, UIUC's electric FSAE team </li>
+                    <li> Hobbies: Video editing, visual effects, 3D compositing, and origami </li>
+                  </ul>
+                </h3>
+            </div>
+        </div>
+
     </div>
-  </div>
-    <div class="nav-items hamburgerIcon">
-        <a href="javascript:void(0);" onclick="hamburgerMenu()">≡</a>
-      </div>
- 
-  <div class = "test">
-    <div class="heroImage"> </div>
-  </div>  
-
-  <div class = "test">
-      <div class="heroImage__"> </div>
-  </div>  
-
-  <div class = "test">
-    <div class="heroImage_"> </div>
-  </div>  
-
-  <div class = "test">
-      <div class="zu"> </div>
-  </div>  
-  
-  <div>
-      <p class="fix" style="float:left; position:relative"><img class="headshot" src="images/helmet.jpg" height="200px" width="200px" border="1px" margin="10px"></p>
-      <div class="design"  style="display:table-cell; vertical-align:top;word-wrap: break-word;">
-      <h3 class ="what">
-          <ul>
-            <li> Education: Sophomore seeking M.S. in Computer Engineering </li>
-            <li> Academic Interests: FPGA development, hardware acceleration, system-on-chip (SoC) systems, embedded systems, and machine learning </li>
-            <li> Organizations: Heavily involved in <a href="https://www.illiniracing.xyz" target="_blank" class = "IFE_link">  Illini Formula Electric </a>, UIUC's electric FSAE team </li>
-            <li> Hobbies: Video editing, visual effects, 3D compositing, and origami </li>
-          </ul>
-        </h3>
-      </div>
-  </div>
-
-  </div>
-  <div class="iconAlign">
-      <a href="https://www.facebook.com/profile.php?id=100006672434942"> <img src="images/facebook_.png"  class="nav-logo"> </a>
-      <a href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ?view_as=subscriber"> <img src="images/youtube_.png"  class="nav-logo"> </a>
-      <a href="https://www.linkedin.com/in/harris-mohamed/"><img src="images/linkedin_.png"  class="nav-logo"> </a>
-      <a href="https://github.com/Batman-wayne/"> <img src="images/git.png" class="nav-logo"> </a>
+    <div class="iconAlign">
+        <a href="https://www.facebook.com/profile.php?id=100006672434942"> <img src="images/facebook-logo.png" class="nav-logo"> </a>
+        <a href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ?view_as=subscriber"> <img src="images/youtube-logo.png" class="nav-logo"> </a>
+        <a href="https://www.linkedin.com/in/harris-mohamed/"><img src="images/linkedin-logo.png" class="nav-logo"> </a>
+        <a href="https://github.com/Batman-wayne/"> <img src="images/git.png" class="nav-logo"> </a>
     </div>
 
+    <!-- JS script to handle the slideshow of images-->
     <script>
         var slideIndex = 0;
         showSlides();
-        
+
         function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("test");
-          // var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          // for (i = 0; i < dots.length; i++) {
-          //   dots[i].className = dots[i].className.replace(" active", "");
-          // }
-          slides[slideIndex-1].style.display = "block";  
-          // dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 4000); // Change image every 2 seconds
+            var i;
+            var slides = document.getElementsByClassName("slideshow-image");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds (Idea from Conner)
         }
-        </script>
-        
+    </script>
+
 </body>

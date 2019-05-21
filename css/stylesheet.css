@@ -1,664 +1,681 @@
 /* GENERAL STYLES
 -----------------------------------*/
-html, body {
-    overflow-x:hidden;
-  }
-  
-  html {
-    overflow-y: scroll;
-  }
-  
-  body {
-    background-color: #131f33;
-    background-position: 0 -2%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  strong {
-    font-weight: 600;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    color: #fff;
-    font-weight: 300;
-  }
-  h2 {
-    font-size: 2em;
-    color: #fff;
-  }
-  h3 {
-    font-size: 1.7em;
-    color: #fff;
-  }
-  h4 {
-    font-size: 1.2em;
-    color: #fff;
-  }
-  
-  .title {
-    padding-bottom: 10px;
-    text-align: center;
-  }
-  
-  /* COLORS
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background-color: #131f33;
+	background-position: 0 -2%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+strong {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 2.5em;
+	color: #fff;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 2em;
+	color: #fff;
+}
+
+h3 {
+	font-size: 1.7em;
+	color: #fff;
+}
+
+h4 {
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.title {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+
+/* COLORS
   -------------------------------------*/
-  .is-white {
-    background-color: #fff;
-  }
-  
-  .is-illiniBlue {
-    background-color: #131f33;
-  }
-  
-  .is-illiniBlueShade {
-    background-color: #37445a;
-  }
-  
-  .is-illiniBlueShade2 {
-    background-color: #081222;
-  }
-  
-  .is-illiniOrange {
-    background-color: #fa6300;
-  }
-  
-  .is-illiniOrangeShade {
-    background-color: #ff8637;
-  }
-  
-  /* NAV
+
+.is-white {
+	background-color: #fff;
+}
+
+.is-illiniBlue {
+	background-color: #131f33;
+}
+
+.is-illiniBlueShade {
+	background-color: #37445a;
+}
+
+.is-illiniBlueShade2 {
+	background-color: #081222;
+}
+
+.is-illiniOrange {
+	background-color: #fa6300;
+}
+
+.is-illiniOrangeShade {
+	background-color: #ff8637;
+}
+
+
+/* NAV
   --------------------------*/
-  .nav {
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
-    overflow-y: hidden;
-    background-image: none;
-    text-align: center;
-    z-index: 4;
-  }
-  
-  .nav-logo {
-    /* float: center; */
-    display: inline-block;
-    height: 45px;
-    padding-left: 20px;
-    margin-top: 8px;
-  }
 
-  .iconAlign{
-      text-align: center;
-      margin-top: 2%;
-      margin-bottom: 10px;
-      /* z-index: 0; */
-      position: relative;
-  }
-  
-  .nav-items {
-    overflow: hidden;
-    /* position: absolute;
+.nav {
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+	overflow-y: hidden;
+	background-image: none;
+	text-align: center;
+	z-index: 4;
+}
+
+.nav-logo {
+	/* float: center; */
+	display: inline-block;
+	height: 45px;
+	padding-left: 20px;
+	margin-top: 8px;
+}
+
+.iconAlign {
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 10px;
+	/* z-index: 0; */
+	position: relative;
+}
+
+.nav-items {
+	overflow: hidden;
+	/* position: absolute;
     left: 50%; 
     transform: translate(-50%, -50%); */
-    float: center;
-    align-content: center;
-    text-align: center;
-    background-color: #333;
-  }
+	float: center;
+	align-content: center;
+	text-align: center;
+	background-color: #333;
+}
 
-  .yote {
-    overflow: hidden;
-    /* position: absolute;
+.yote {
+	overflow: hidden;
+	/* position: absolute;
     left: 50%; 
     transform: translate(-50%, -50%); */
-    float: center;
-    align-content: center;
-    text-align: center;
-    background-color: #333;
-  }
-  
-  
-  .nav-items a {
-    font-size: 18px;
-    /* position: relative; */
-    /* text-align: center; */
-    color: white;
-    /* padding: 14px 16px; */
-    padding: 5px 5px;
-    text-decoration: none;
-  }
-  
-  .dropdown {
-    display: inline-block;
-  }
+	float: center;
+	align-content: center;
+	text-align: center;
+	background-color: #333;
+}
 
-  .encapsulate {
-    background-color: #333;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
+.nav-items a {
+	font-size: 18px;
+	/* position: relative; */
+	/* text-align: center; */
+	color: white;
+	/* padding: 14px 16px; */
+	padding: 5px 5px;
+	text-decoration: none;
+}
 
-  .dropdown .dropbtn {
-    margin: none;
-    font-size: 18px;  
-    border: 0px;
-    outline: none;
-    color: white;
-    background-color: inherit;
-    font-family: inherit;
-    padding: 5px 5px;
-  }
-  
-  .nav-items a:hover, .dropdown:hover .dropbtn{
-    background-color: silver;
+.dropdown {
+	display: inline-block;
+}
 
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    color: black;
-    background-color: black;
-    min-width: 160px;
-    text-align: center;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    /* padding: 12px 16px; */
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: grey;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-    color: black;
-  }
-  
-  .hamburgerIcon a{
-    display: none;
-  }
-  
-  a:hover {
-    color: white;
-    text-decoration: none;
-    
-  }
+.encapsulate {
+	background-color: #333;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
 
-  a.anchor {
-      display: block;
-      position: relative;
-      top: -50px;
-      visibility: hidden;
-  }
+.dropdown .dropbtn {
+	margin: none;
+	font-size: 18px;
+	border: 0px;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	padding: 5px 5px;
+}
 
-  a:visited {
-    color: white;
-    text-decoration: none; 
-  
-  }
-  
-  a:active {
-    color: white;
-    text-decoration: none; 
-  }
+.nav-items a:hover,
+.dropdown:hover .dropbtn {
+	background-color: silver;
+}
 
-  a:link {
-    color: white;
-    text-decoration: none; 
-  }
-  /* HERO BANNER-IMAGE */
-  
-  .landingPage {
-    text-align: center;
-  }
+.dropdown-content {
+	display: none;
+	position: absolute;
+	color: black;
+	background-color: black;
+	min-width: 160px;
+	text-align: center;
+	/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	/* padding: 12px 16px; */
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: grey;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	color: black;
+}
+
+.hamburgerIcon a {
+	display: none;
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -50px;
+	visibility: hidden;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:active {
+	color: white;
+	text-decoration: none;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
 
 
-  .header {
-    width: 100%;
-    text-align: center;
-    font-size: 4em;
-    color: white;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    margin-top: 0%;
-    margin-bottom: 1%;
-    z-index: 1;  
-    overflow: hidden;
-  }
-    
-  .heroTitle {
-    font-size: 6em;
-    color: #131f33;
-    font-weight: 600;
-  }
-  .heroTitle span {
-    color: #fa6300;
-  }
-  .sub {
-    font-size: 4em;
-    font-weight: normal;
-    margin-top: -30px;
-  }
-  
-  .heroImage {
-    margin-top: 2%;
-    height: 50vh;
-    position: relative;
-    background: url(../images/booth_1.jpg) center center;
-    background-size: cover;
-    z-index: 0;
-  }
+/* HERO BANNER-IMAGE */
 
-  .project-info {
-    color: white;
-    font-size: 1.3em;
-  }
+.landingPage {
+	text-align: center;
+}
 
-  .wave-info {
-    color: white;
-    font-size: 1.3em;
-    display: list-item;
-  }
+.header {
+	width: 100%;
+	text-align: center;
+	font-size: 4em;
+	color: white;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	margin-top: 0%;
+	margin-bottom: 1%;
+	z-index: 1;
+	overflow: hidden;
+}
 
-  .heroImage_ {
-    margin-top: 2%;
-    height: 50vh;
-    position: relative;
-    background: url(../images/yote.jpg) center center;
-    background-size: cover;
-    z-index: 0;
-  }
+.heroTitle {
+	font-size: 6em;
+	color: #131f33;
+	font-weight: 600;
+}
 
-  .zu {
-    margin-top: 2%;
-    height: 50vh;
-    position: relative;
-    background: url(../images/zu_.jpg) center center;
-    background-size: cover;
-    z-index: 0;
-  }
+.heroTitle span {
+	color: #fa6300;
+}
 
-  .heroImage__ {
-    margin-top: 2%;
-    height: 50vh;
-    position: relative;
-    background: url(../images/ife_.jpg) center center;
-    background-size: cover;
-    z-index: 0;
-  }
+.sub {
+	font-size: 4em;
+	font-weight: normal;
+	margin-top: -30px;
+}
 
-  .heroImage___ {
-    margin-top: 2%;
-    height: 50vh;
-    position: relative;
-    background: url(../images/render.JPG) center center;
-    background-size: cover;
-    z-index: 0;
-  }
-  
-  .lorem {
-    display: inline-block;
-  }
+.heroImage {
+	margin-top: 2%;
+	height: 50vh;
+	position: relative;
+	background: url(../images/booth_1.jpg) center center;
+	background-size: cover;
+	z-index: 0;
+}
 
-  .videowrap {
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
-  }
+.project-info {
+	color: white;
+	font-size: 1.3em;
+}
 
-  .video-container {
-    position:relative;
-    padding-bottom:56.25%;
-    padding-top:30px;
-    height:0;
-    overflow:hidden;
-  }
-  
-  iframe {
-    margin: auto;
-    display: block;
-  }
+.wave-info {
+	color: white;
+	font-size: 1.3em;
+	display: list-item;
+}
 
-  .video-container iframe, .video-container object, .video-container embed {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-  }
+.steve {
+	margin-top: 2%;
+	height: 50vh;
+	position: relative;
+	background: url(../images/steve-navistar.jpg) center center;
+	background-size: cover;
+	z-index: 0;
+}
 
-  .headshot {
-    /* float: left; */
-    margin-left: 2%;
-    margin-right: 5%;
-    margin-top: 3%;
-    margin-bottom: 0 auto;
-    /* height: 15vw; */
-    /* height: 275px;
+.zuofu-crop {
+	margin-top: 2%;
+	height: 50vh;
+	position: relative;
+	background: url(../images/zuofu-crop.jpg) center center;
+	background-size: cover;
+	z-index: 0;
+}
+
+.electric {
+	margin-top: 2%;
+	height: 50vh;
+	position: relative;
+	background: url(../images/formula-electric.jpg) center center;
+	background-size: cover;
+	z-index: 0;
+}
+
+.heroImage___ {
+	margin-top: 2%;
+	height: 50vh;
+	position: relative;
+	background: url(../images/render.JPG) center center;
+	background-size: cover;
+	z-index: 0;
+}
+
+.lorem {
+	display: inline-block;
+}
+
+.videowrap {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+iframe {
+	margin: auto;
+	display: block;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.headshot {
+	/* float: left; */
+	margin-left: 2%;
+	margin-right: 5%;
+	margin-top: 3%;
+	margin-bottom: 0 auto;
+	/* height: 15vw; */
+	/* height: 275px;
     width: 275px; */
-    border-radius: 50%;
-    /* display: inline-block; */
-  }
+	border-radius: 50%;
+	/* display: inline-block; */
+}
+
+.yaboi {
+	font-size: .75vw;
+	text-align: left;
+	word-wrap: break-word;
+	/* position: relative; */
+	/* display: block; */
+	overflow: hidden;
+	height: 200px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.main-layout {
+	font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
+	display: inline-block;
+}
+
+.IFE_link {
+	color: white;
+}
+
+.IFE_link a {
+	color: white;
+	text-decoration: none;
+}
+
+.IFE_link a:hover {
+	color: white;
+	text-decoration: none;
+}
 
 
-  .yaboi {
-    font-size: .75vw;
-    text-align: left;
-    word-wrap: break-word;
-    /* position: relative; */
-    /* display: block; */
-    overflow: hidden;
-    height: 200px;
-    display: table-cell;
-    vertical-align: top;
-  }
+/* TOP SPONSORS PAGE*/
 
-  .design{
-    /* font-size: 11px; */
-    font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
-    display: inline-block;
-    }
+.sponsors {
+	text-align: center;
+	padding: 10px 20px;
+	padding-bottom: 20px;
+}
 
-  .IFE_link {
-   color: white;
-  }
+.background_line {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
 
-  .IFE_link a{
-    color: white;
-    text-decoration: none;
-   }
+.background_line:before {
+	content: "";
+	z-index: -1;
+	margin: 0 auto;
+	position: absolute;
+	border-top: 1px solid #fff;
+	top: 20px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 80%;
+}
 
-   .IFE_link a:hover{
-    color: white;
-    text-decoration: none;
-   }
-  /* TOP SPONSORS PAGE*/
-  
-  .sponsors {
-    text-align: center;
-    padding: 10px 20px;
-    padding-bottom: 20px;
-  }
-  
-  .background_line {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .background_line:before {
-    content: "";
-    z-index: -1;
-    margin: 0 auto;
-    position: absolute;
-    border-top: 1px solid #fff;
-    top: 20px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 80%;
-  }
-  
-  .background_line span {
-    padding: 0 15px;
-    z-index: 10;
-  }
-  
-  .sponsorsImg {
-    display: inline-block;
-    padding-top: 10px;
-  }
-  
-  /* ABOUT CAR */
-  .arrow {
-    z-index: 3;
-    cursor: pointer;
-    height: 40px;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    transform: rotate(45deg);
-    width: 40px;
-  }
-  
-  #control-next {
-    border-right: 3px solid #fa6300;
-    border-top: 3px solid #fa6300;
-    right: 5%;
-  }
-  #control-prev {
-    border-bottom: 3px solid #fa6300;
-    border-left: 3px solid #fa6300;
-    left: 5%;
-  }
-  
-  .cars {
-    position: relative;
-    padding: 0px 100px;
-  }
-  .carCard {
-    max-height: 360px;
-  }
-  .innerCarCard {
-    padding: 15px 0px;
-  }
-  .carImgWrap {
-    padding-right: 0px;
-  }
-  .carImg2019 {
-    background: url(../images/ife19_sideCar_placeholder.jpg) center center;"
-    background-size: cover;
-    z-index: 0;
-    max-height: 360px;
-  }
-  .carImg2018 {
-    background: url(../images/fsae2018_lincoln_sideCar_c_e.jpg) center center;"
-    background-size: cover;
-    z-index: 0;
-    max-height: 360px;
-  }
-  .carImg2017 {
-    background: url(../images/ife18_web_Lincoln17_v2_c.jpg) center center;"
-    background-size: cover;
-    z-index: 0;
-    max-height: 360px;
-  }
-  
-  .carInfo h4{
-    color: #ff8637;
-    line-height: 1.0em;
-    font-weight: 200;
-  }
-  
-  .carInfo h4 span {
-    color: white;
-  }
-  
-  /* TEAM SECTION */
-  .teamOverall {
-    margin: 0 auto;
-    max-width: 1000px;
-  }
-  
-  .team {
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .member {
-    padding-bottom: 10px;
-  }
-  
-  .centerRow {
-    display:inline-block;
-    float:none;
-  }
-  
-  .card {
-    max-width: 300px;
-    height: auto;
-    margin-top: -10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  
-  .teamName {
-    font-weight: 300;
-  }
-  
-  .teamMemberTitle {
-    font-weight: 200;
-  }
-  
-  .join {
-    text-align: center;
-  }
-  
-  .typeform-widget {
-    width: 80%;
-    height: 800px;
-    display: inline-block;
-  }
-  
-  /* MOBILE PAGE ---------------------------- */
-  @media screen and (max-width:1130px) {
-    .cars {
-      padding: 0px 0px;
-    }
-  }
-  
+.background_line span {
+	padding: 0 15px;
+	z-index: 10;
+}
+
+.sponsorsImg {
+	display: inline-block;
+	padding-top: 10px;
+}
 
 
-  @media screen and (max-width:766px) {
-    .nav-logo {
-      height: 43px;
-      padding-bottom: 8px;
-    }
+/* ABOUT CAR */
 
-    .fix{
-      width: 100%;
-      text-align: center;
-    }
+.arrow {
+	z-index: 3;
+	cursor: pointer;
+	height: 40px;
+	margin-top: -10px;
+	position: absolute;
+	top: 50%;
+	transform: rotate(45deg);
+	width: 40px;
+}
 
-    .design{
-      /* font-size: 11px; */
-      font-size: 10px;
-      display: inline-block;
-      }
+#control-next {
+	border-right: 3px solid #fa6300;
+	border-top: 3px solid #fa6300;
+	right: 5%;
+}
 
-    .nav-items a{
-      display: none;
-    }
-    .hamburgerIcon a{
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      top: -5px;
-    }
-  
-    .nav-items.responsive {
-      display: block;
-      margin-top: 50px;
-      background-color: #37445A;
-    }
-    .nav-items.responsive a {
-      float: none;
-      display: block;
-      text-align: center;
-      /* FULL WIDTH EXPAND */
-      margin: 0 -9999px;
-      /* add back negative margin value */
-      padding: 14px 9999px;
-    }
-  
-    .heroText {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      margin-top: 20%;
-      z-index: 1;
-    }
-    .heroTitle {
-      font-size: 3em;
-      color: #131f33;
-      font-weight: 600;
-    }
-    .heroTitle span {
-      color: #fa6300;
-    }
-    .sub {
-      font-size: 2em;
-      font-weight: normal;
-      margin-top: 0px;
-    }
-  
-    .instagram {
-      width: 100%;
-    }
-  
-    .arrow {
-      margin-top: -10px;
-      top: 75%;
-      transform: rotate(45deg);
-      width: 40px;
-    }
-    #control-next {
-      right: 7%;
-    }
-    #control-prev {
-      left: 7%;
-    }
-    .cars {
-      padding: 0px 0px;
-      position: relative;
-    }
-    .carCard {
-      text-align: center;
-    }
-    .carImgWrap {
-      padding: 0;
-    }
-  
-    .typeform-widget {
-      width: 100%;
-      height: 500px;
-    }
+#control-prev {
+	border-bottom: 3px solid #fa6300;
+	border-left: 3px solid #fa6300;
+	left: 5%;
+}
+
+.cars {
+	position: relative;
+	padding: 0px 100px;
+}
+
+.carCard {
+	max-height: 360px;
+}
+
+.innerCarCard {
+	padding: 15px 0px;
+}
+
+.carImgWrap {
+	padding-right: 0px;
+}
+
+.carImg2019 {
+	background: url(../images/ife19_sideCar_placeholder.jpg) center center;
+	"
+ background-size: cover;
+	z-index: 0;
+	max-height: 360px;
+}
+
+.carImg2018 {
+	background: url(../images/fsae2018_lincoln_sideCar_c_e.jpg) center center;
+	"
+ background-size: cover;
+	z-index: 0;
+	max-height: 360px;
+}
+
+.carImg2017 {
+	background: url(../images/ife18_web_Lincoln17_v2_c.jpg) center center;
+	"
+ background-size: cover;
+	z-index: 0;
+	max-height: 360px;
+}
+
+.carInfo h4 {
+	color: #ff8637;
+	line-height: 1.0em;
+	font-weight: 200;
+}
+
+.carInfo h4 span {
+	color: white;
+}
+
+
+/* TEAM SECTION */
+
+.teamOverall {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.team {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.member {
+	padding-bottom: 10px;
+}
+
+.centerRow {
+	display: inline-block;
+	float: none;
+}
+
+.card {
+	max-width: 300px;
+	height: auto;
+	margin-top: -10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.teamName {
+	font-weight: 300;
+}
+
+.teamMemberTitle {
+	font-weight: 200;
+}
+
+.join {
+	text-align: center;
+}
+
+.typeform-widget {
+	width: 80%;
+	height: 800px;
+	display: inline-block;
+}
+
+
+/* MOBILE PAGE ---------------------------- */
+
+@media screen and (max-width:1130px) {
+	.cars {
+		padding: 0px 0px;
+	}
+}
+
+@media screen and (max-width:766px) {
+	.nav-logo {
+		height: 43px;
+		padding-bottom: 8px;
   }
   
-  @media screen and (max-height:600px) and (orientation:landscape) {
-    .landingPage {
-      text-align: center;
-    }
-    .heroText {
-      width: 100%;
-      margin-top: 9%;
-      padding-right: 5%
-    }
-    .heroTitle {
-      font-size: 3em;
-    }
-    .sub {
-      font-size: 2em;
-      font-weight: normal;
-      margin-top: -20px;
-    }
-    .cars {
-      padding: 0px 0px;
-    }
+	.headshot-mobile {
+		width: 100%;
+		text-align: center;
   }
   
+	.main-layout {
+		font-size: 10px;
+		display: inline-block;
+	}
+	.nav-items a {
+		display: none;
+	}
+	.hamburgerIcon a {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: -5px;
+	}
+	.nav-items.responsive {
+		display: block;
+		margin-top: 50px;
+		background-color: #37445A;
+	}
+	.nav-items.responsive a {
+		float: none;
+		display: block;
+		text-align: center;
+		/* FULL WIDTH EXPAND */
+		margin: 0 -9999px;
+		/* add back negative margin value */
+		padding: 14px 9999px;
+	}
+	.heroText {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		margin-top: 20%;
+		z-index: 1;
+	}
+	.heroTitle {
+		font-size: 3em;
+		color: #131f33;
+		font-weight: 600;
+	}
+	.heroTitle span {
+		color: #fa6300;
+	}
+	.sub {
+		font-size: 2em;
+		font-weight: normal;
+		margin-top: 0px;
+	}
+	.instagram {
+		width: 100%;
+	}
+	.arrow {
+		margin-top: -10px;
+		top: 75%;
+		transform: rotate(45deg);
+		width: 40px;
+	}
+	#control-next {
+		right: 7%;
+	}
+	#control-prev {
+		left: 7%;
+	}
+	.cars {
+		padding: 0px 0px;
+		position: relative;
+	}
+	.carCard {
+		text-align: center;
+	}
+	.carImgWrap {
+		padding: 0;
+	}
+	.typeform-widget {
+		width: 100%;
+		height: 500px;
+	}
+}
+
+@media screen and (max-height:600px) and (orientation:landscape) {
+	.landingPage {
+		text-align: center;
+	}
+	.heroText {
+		width: 100%;
+		margin-top: 9%;
+		padding-right: 5%
+	}
+	.heroTitle {
+		font-size: 3em;
+	}
+	.sub {
+		font-size: 2em;
+		font-weight: normal;
+		margin-top: -20px;
+	}
+	.cars {
+		padding: 0px 0px;
+	}
+}
