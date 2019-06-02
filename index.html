@@ -3,19 +3,6 @@
 
 <head>
 
-    <!-- Google Analytics attempt -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-140232502-1');
-    </script>
-
     <!-- Basic Page Setup -->
     <meta charset="utf-8">
     <title>Harris Mohamed</title>
@@ -67,7 +54,7 @@
                     </div>
                 </div>
                 <a href="pages/resume.html">RESUME</a>
-                <a href="pages/contact.html">ABOUT/CONTACT</a>
+                <a href="pages/contact.html">ABOUT</a>
             </div>
         </div>
 
@@ -78,7 +65,7 @@
 
         <!-- Each image in the slideshow -->
         <div class="slideshow-image">
-            <div class="heroImage"> </div>
+            <div class="hackIllinois"> </div>
         </div>
 
         <div class="slideshow-image">
@@ -98,9 +85,9 @@
             <div class="main-layout" style="display:table-cell; vertical-align:top;word-wrap: break-word;">
                 <h3>
                   <ul>
-                    <li> Education: Sophomore seeking M.S. in Computer Engineering </li>
-                    <li> Academic Interests: FPGA development, hardware acceleration, system-on-chip (SoC) systems, embedded systems, and machine learning </li>
-                    <li> Organizations: Heavily involved in <a href="https://www.illiniracing.xyz" target="_blank" class = "IFE_link">  Illini Formula Electric </a>, UIUC's electric FSAE team </li>
+                    <li> Education: Rising junior seeking M.S. in Computer Engineering </li>
+                    <li> Academic Interests: FPGAs/hardware acceleration, signal processing, system-on-chip (SoC) systems, embedded systems, and machine learning </li>
+                    <li> Organizations: Heavily involved in <a href="https://www.illiniracing.xyz" target="_blank" class = "IFE_link"> <u> Illini Formula Electric </u></a>, UIUC's electric FSAE team </li>
                     <li> Hobbies: Video editing, visual effects, 3D compositing, and origami </li>
                   </ul>
                 </h3>
@@ -119,20 +106,6 @@
     <script>
         var slideIndex = 0;
         showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("slideshow-image");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 4000); // Change image every 4 seconds (Idea from Conner)
-        }
     </script>
 
 </body>

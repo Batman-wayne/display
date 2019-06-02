@@ -47,80 +47,24 @@ h4 {
 	text-align: center;
 }
 
-
-/* COLORS
-  -------------------------------------*/
-
-.is-white {
-	background-color: #fff;
-}
-
-.is-illiniBlue {
-	background-color: #131f33;
-}
-
-.is-illiniBlueShade {
-	background-color: #37445a;
-}
-
-.is-illiniBlueShade2 {
-	background-color: #081222;
-}
-
-.is-illiniOrange {
-	background-color: #fa6300;
-}
-
-.is-illiniOrangeShade {
-	background-color: #ff8637;
-}
-
-
 /* NAV
   --------------------------*/
-
-.nav {
-	width: 100%;
-	position: fixed;
-	overflow: hidden;
-	overflow-y: hidden;
-	background-image: none;
-	text-align: center;
-	z-index: 4;
-}
-
 .nav-logo {
-	/* float: center; */
 	display: inline-block;
 	height: 45px;
 	padding-left: 20px;
 	margin-top: 8px;
-}
+}  
 
 .iconAlign {
 	text-align: center;
 	margin-top: 2%;
 	margin-bottom: 10px;
-	/* z-index: 0; */
 	position: relative;
 }
 
 .nav-items {
 	overflow: hidden;
-	/* position: absolute;
-    left: 50%; 
-    transform: translate(-50%, -50%); */
-	float: center;
-	align-content: center;
-	text-align: center;
-	background-color: #333;
-}
-
-.yote {
-	overflow: hidden;
-	/* position: absolute;
-    left: 50%; 
-    transform: translate(-50%, -50%); */
 	float: center;
 	align-content: center;
 	text-align: center;
@@ -129,16 +73,21 @@ h4 {
 
 .nav-items a {
 	font-size: 18px;
-	/* position: relative; */
-	/* text-align: center; */
+	position: relative;
+	text-align: center;
 	color: white;
-	/* padding: 14px 16px; */
+	padding: 14px 16px;
 	padding: 5px 5px;
 	text-decoration: none;
 }
 
 .dropdown {
 	display: inline-block;
+}
+
+.nav-items a:hover,
+.dropdown:hover .dropbtn {
+	background-color: silver;
 }
 
 .encapsulate {
@@ -158,11 +107,6 @@ h4 {
 	background-color: inherit;
 	font-family: inherit;
 	padding: 5px 5px;
-}
-
-.nav-items a:hover,
-.dropdown:hover .dropbtn {
-	background-color: silver;
 }
 
 .dropdown-content {
@@ -228,10 +172,6 @@ a:link {
 
 /* HERO BANNER-IMAGE */
 
-.landingPage {
-	text-align: center;
-}
-
 .header {
 	width: 100%;
 	text-align: center;
@@ -246,23 +186,7 @@ a:link {
 	overflow: hidden;
 }
 
-.heroTitle {
-	font-size: 6em;
-	color: #131f33;
-	font-weight: 600;
-}
-
-.heroTitle span {
-	color: #fa6300;
-}
-
-.sub {
-	font-size: 4em;
-	font-weight: normal;
-	margin-top: -30px;
-}
-
-.heroImage {
+.hackIllinois {
 	margin-top: 2%;
 	height: 50vh;
 	position: relative;
@@ -309,17 +233,13 @@ a:link {
 	z-index: 0;
 }
 
-.heroImage___ {
+.apollo {
 	margin-top: 2%;
 	height: 50vh;
 	position: relative;
 	background: url(../images/render.JPG) center center;
 	background-size: cover;
 	z-index: 0;
-}
-
-.lorem {
-	display: inline-block;
 }
 
 .videowrap {
@@ -614,14 +534,6 @@ iframe {
 		margin-top: 20%;
 		z-index: 1;
 	}
-	.heroTitle {
-		font-size: 3em;
-		color: #131f33;
-		font-weight: 600;
-	}
-	.heroTitle span {
-		color: #fa6300;
-	}
 	.sub {
 		font-size: 2em;
 		font-weight: normal;
@@ -659,16 +571,10 @@ iframe {
 }
 
 @media screen and (max-height:600px) and (orientation:landscape) {
-	.landingPage {
-		text-align: center;
-	}
 	.heroText {
 		width: 100%;
 		margin-top: 9%;
 		padding-right: 5%
-	}
-	.heroTitle {
-		font-size: 3em;
 	}
 	.sub {
 		font-size: 2em;
