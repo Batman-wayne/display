@@ -40,7 +40,7 @@
 
                 <!-- Dropdown options -->
                 <div class="dropdown">
-                    <a href="pages/projects.html" class="dropbtn">PROJECTS</a>
+                    <a href="projects.html" class="dropbtn">PROJECTS</a>
                     <div class="dropdown-content">
                         <a href="projects.html#STEVE">S.T.E.V.E.</a>
                         <a href="projects.html#HACK">HackMe</a>
@@ -78,7 +78,7 @@
 
         <p class="project-info"> <u> Flight controller: </u> The most crucial part of this project was the custom flight controller. In most drone builds, it is easiest to buy an off-the-shelf flight controller that takes care of all the flight algorithms for you and all you have to do is plug in your motors and battery to get it working. However, we thought it would be better as a learning experience if we implemented the flight controller on our own from scratch. We did this using an Arduino UNO as our microcontroller and a gyroscope/accelerometer as our Inertial Measurement Unit (IMU). We used an MPU-6050 for the gyroscope/accelerometer. After this, we used a PID controller to realize our flight controller. This took a bulk of our school year and ultimately ended up being a success, as we were able to fly the drone at the end of the semester.</p>
 
-        <p style="text-align:center"><img src="../images/PID.PNG" height="460px" width="1114px"></img>
+        <p style="text-align:center"><img class ="project-pic" src="../images/PID.PNG" height="460px" width="1114px"></img>
         </p>
         <p style="text-align:center" class="project-info"> <em> Initial proof-of-concept calculations for PID controller</em></p>
 
@@ -88,7 +88,7 @@
 
         <p class="project-info"> <u> Object detection and location updates: </u> One fundamental aspect of a drone is to... not fly into nearby objects. While real drones use laser-detection to detect nearby objects, those sensors are expensive and difficult to get working, so we chose to use ultrasonic sensors. Our end goal was 6 sensors in each axis, 3 in each direction (for instance we would have 3 pointing directly upwards and 3 pointing directly downwards, thus covering the z-axis). We used the MUX shield, which adds 27 additional inputs to the Arduino and we ended up writing our own custom drivers for all the ultrasonic values. It fully worked, but we did not get to interface it with the rest of the drone. However, given more time, we could have easily gotten this functionality working. We also added an off-the-shelf GPS module, which was capable of logging the coordinates. Combined with the ultrasonic sensor data, we have 3D-coordinates. </p>
 
-        <p style="text-align:center"><img src="../images/GPS.PNG" height="347px" width="595px"></img>
+        <p style="text-align:center"><img class ="project-pic" src="../images/GPS.PNG" height="347px" width="595px"></img>
         </p>
         <p style="text-align:center" class="project-info"> <em> Overlay of GPS location data for a few test flights near school</em></p>
 
@@ -109,7 +109,7 @@
 
         <p class="project-info"> <u> Wave extraction and Pre-processing: </u> The fundamental problem with a wave as small as the electrical ones from the exterior of the brain is how miniscule they are. The waves are measured from the brain by using non-invasive electrodes. They are then fed into a 24 bit ADC (Analog-to-Digital converter) to accurately read the incoming waves. Once on a microcontroller, these waves can be stored and sent anywhere. For HackIllinois 2019, we had a Raspberry Pi 3 take these signals and upload them to a database. </p>
 
-        <p style="text-align:center"><img src="../images/EEG.PNG" height="347px" width="595px"></img>
+        <p style="text-align:center"><img class ="project-pic" src="../images/EEG.PNG" height="347px" width="595px"></img>
         </p>
         <p style="text-align:center" class="project-info"> <em> Raw reading of the EEG headset output</em></p>
 
@@ -138,7 +138,7 @@
 
         <p class="project-info"> In addition, I also developed a GUI that was capable of outputting the data in realtime. This was done in C# using the .NET framework.</p>
 
-        <p style="text-align:center"><img src="../images/DATA.PNG" height="608px" width="1285px"></img>
+        <p style="text-align:center"><img class ="project-pic" src="../images/DATA.PNG" height="608px" width="1285px"></img>
         </p>
         <p style="text-align:center" class="project-info"> <em> Graph of collected data and screenshot of developed GUI</em></p>
         <a name="IFE1">
@@ -153,7 +153,7 @@
             The final system is currently being worked on. We designed our system to be custom PCB shields that plug directly into a Raspberry Pi. There are 4 corner boards and 1 central board, which then all upload their data to our servers for later analysis.
         </p>
 
-        <p style="text-align:center"><img src="../images/VIZ.PNG" height="813px" width="810px"></img>
+        <p style="text-align:center"><img class ="project-pic" src="../images/VIZ.PNG" height="813px" width="810px"></img>
         </p>
         <p style="text-align:center" class="project-info"> <em> Graph of collected data from preliminary testing </em></p>
 

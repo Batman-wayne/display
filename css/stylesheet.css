@@ -116,7 +116,6 @@ h4 {
 	background-color: black;
 	min-width: 160px;
 	text-align: center;
-	/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 	z-index: 1;
 }
 
@@ -248,6 +247,14 @@ a:link {
 	width: 100%;
 }
 
+.resume-mobile{
+	display: none;
+}
+
+.resume-desktop{
+	display: block;
+}
+
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -272,28 +279,11 @@ iframe {
 }
 
 .headshot {
-	/* float: left; */
 	margin-left: 2%;
 	margin-right: 5%;
 	margin-top: 3%;
 	margin-bottom: 0 auto;
-	/* height: 15vw; */
-	/* height: 275px;
-    width: 275px; */
 	border-radius: 50%;
-	/* display: inline-block; */
-}
-
-.yaboi {
-	font-size: .75vw;
-	text-align: left;
-	word-wrap: break-word;
-	/* position: relative; */
-	/* display: block; */
-	overflow: hidden;
-	height: 200px;
-	display: table-cell;
-	vertical-align: top;
 }
 
 .main-layout {
@@ -315,177 +305,12 @@ iframe {
 	text-decoration: none;
 }
 
-
-/* TOP SPONSORS PAGE*/
-
-.sponsors {
-	text-align: center;
-	padding: 10px 20px;
-	padding-bottom: 20px;
-}
-
-.background_line {
-	text-align: center;
-	position: relative;
-	z-index: 1;
-}
-
-.background_line:before {
-	content: "";
-	z-index: -1;
-	margin: 0 auto;
-	position: absolute;
-	border-top: 1px solid #fff;
-	top: 20px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 80%;
-}
-
-.background_line span {
-	padding: 0 15px;
-	z-index: 10;
-}
-
-.sponsorsImg {
-	display: inline-block;
-	padding-top: 10px;
-}
-
-
-/* ABOUT CAR */
-
-.arrow {
-	z-index: 3;
-	cursor: pointer;
-	height: 40px;
-	margin-top: -10px;
-	position: absolute;
-	top: 50%;
-	transform: rotate(45deg);
-	width: 40px;
-}
-
-#control-next {
-	border-right: 3px solid #fa6300;
-	border-top: 3px solid #fa6300;
-	right: 5%;
-}
-
-#control-prev {
-	border-bottom: 3px solid #fa6300;
-	border-left: 3px solid #fa6300;
-	left: 5%;
-}
-
-.cars {
-	position: relative;
-	padding: 0px 100px;
-}
-
-.carCard {
-	max-height: 360px;
-}
-
-.innerCarCard {
-	padding: 15px 0px;
-}
-
-.carImgWrap {
-	padding-right: 0px;
-}
-
-.carImg2019 {
-	background: url(../images/ife19_sideCar_placeholder.jpg) center center;
-	"
- background-size: cover;
-	z-index: 0;
-	max-height: 360px;
-}
-
-.carImg2018 {
-	background: url(../images/fsae2018_lincoln_sideCar_c_e.jpg) center center;
-	"
- background-size: cover;
-	z-index: 0;
-	max-height: 360px;
-}
-
-.carImg2017 {
-	background: url(../images/ife18_web_Lincoln17_v2_c.jpg) center center;
-	"
- background-size: cover;
-	z-index: 0;
-	max-height: 360px;
-}
-
-.carInfo h4 {
-	color: #ff8637;
-	line-height: 1.0em;
-	font-weight: 200;
-}
-
-.carInfo h4 span {
-	color: white;
-}
-
-
-/* TEAM SECTION */
-
-.teamOverall {
-	margin: 0 auto;
-	max-width: 1000px;
-}
-
-.team {
-	text-align: center;
-	padding: 10px 0;
-}
-
-.member {
-	padding-bottom: 10px;
-}
-
-.centerRow {
-	display: inline-block;
-	float: none;
-}
-
-.card {
-	max-width: 300px;
-	height: auto;
-	margin-top: -10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.teamName {
-	font-weight: 300;
-}
-
-.teamMemberTitle {
-	font-weight: 200;
-}
-
-.join {
-	text-align: center;
-}
-
-.typeform-widget {
-	width: 80%;
-	height: 800px;
-	display: inline-block;
-}
-
-
 /* MOBILE PAGE ---------------------------- */
 
 @media screen and (max-width:1130px) {
-	.cars {
-		padding: 0px 0px;
-	}
+	
 }
+
 
 @media screen and (max-width:766px) {
 	.nav-logo {
@@ -497,33 +322,41 @@ iframe {
 		width: 100%;
 		text-align: center;
   }
-  
+  .hackIllinois, .electric, .steve, .zuofu-crop{
+		height: 60vw;
+	}
+
 	.main-layout {
 		font-size: 10px;
 		display: inline-block;
 	}
-	.nav-items a {
+	.nav-items {
+		overflow: hidden;
+		float: center;
+		align-content: center;
+		text-align: center;
+		background-color: #333;
+	}
+	.dropdown-content a{
 		display: none;
 	}
-	.hamburgerIcon a {
-		display: inline-block;
-		position: absolute;
-		right: 0;
-		top: -5px;
-	}
-	.nav-items.responsive {
-		display: block;
-		margin-top: 50px;
-		background-color: #37445A;
-	}
+
 	.nav-items.responsive a {
-		float: none;
 		display: block;
 		text-align: center;
-		/* FULL WIDTH EXPAND */
 		margin: 0 -9999px;
-		/* add back negative margin value */
 		padding: 14px 9999px;
+	}
+ .encapsulate {
+		display: block;
+		background-color: #333;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+	}
+	.project-pic {
+		height: 50vw;
+		width: 90vw;
 	}
 	.heroText {
 		width: 100%;
@@ -534,54 +367,16 @@ iframe {
 		margin-top: 20%;
 		z-index: 1;
 	}
-	.sub {
+	.resume-desktop{
+		display: none;
+	}
+	.resume-mobile{
+		display: block;
+		color: white;
 		font-size: 2em;
-		font-weight: normal;
-		margin-top: 0px;
-	}
-	.instagram {
-		width: 100%;
-	}
-	.arrow {
-		margin-top: -10px;
-		top: 75%;
-		transform: rotate(45deg);
-		width: 40px;
-	}
-	#control-next {
-		right: 7%;
-	}
-	#control-prev {
-		left: 7%;
-	}
-	.cars {
-		padding: 0px 0px;
-		position: relative;
-	}
-	.carCard {
-		text-align: center;
-	}
-	.carImgWrap {
-		padding: 0;
-	}
-	.typeform-widget {
-		width: 100%;
-		height: 500px;
 	}
 }
 
 @media screen and (max-height:600px) and (orientation:landscape) {
-	.heroText {
-		width: 100%;
-		margin-top: 9%;
-		padding-right: 5%
-	}
-	.sub {
-		font-size: 2em;
-		font-weight: normal;
-		margin-top: -20px;
-	}
-	.cars {
-		padding: 0px 0px;
-	}
+
 }
