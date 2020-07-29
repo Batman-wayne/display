@@ -133,8 +133,11 @@
                     <p class="lead">A continuation of Project Sentinel, further exploring Sentinel's potential</p>
                     <p class="lead">2020 - Ongoing: In progress</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <p>Project Sentinel taught me a lot. The project was ambitious because of how difficult the algorithms involved were. I have only had conceptual exposure to SLAM and Kalman filters, and these were crucial to Sentinel's operation. The idea was still extremely interesting, so I have still decided to pursue it. However, this time, I will trying to figure out the algorithm first. The current plan is to use a physics plugin and model Sentinel. The plugin allows me to define the robot using kinematic models and control it using code. This will allow for a robust testbench where the SLAM algorithm and Kalman filter can hopefully be figured out and tuned. From here, it shouldn't be too hard to port this over to actual hardware.</p>
+
+                    <br> 
+
+                    <p> The physics plugin and robot simulation will be completed using Unreal Engine. The engine will not only allow for an accurate, physics-based simulation, but also an aesthetic one. </p>
                 </div>
 
                 <hr class="featurette-divider">
@@ -144,8 +147,15 @@
                     <p class="lead">TiM $10K Challenge Competition Entry as well as my academic research project.</p>
                     <p class="lead">2019 - 2020: Completed</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <p>The TiM $10K Challenge is an annual competition hosted by SICK. Inc, a German company that manufactures sensors for factory and logistics automation. The goal of the competition is rather vague and open-ended: Simply use the TiM781, a 2D LIDAR sensor, in any application. For this competition, I teamed up with my friend (who is a Mechanical Engineer), and we came up with the idea for Project Sentinel: an autonomous robot that is designed to become a part of a security team and detect intruders in an indoor environment. The robot houses a novel mechanism that rotates the 2D sensor in 3-dimensions and is able to accurately reproduce 3D environments. Once the environment is scanned, the plan was to feed the data into a Kalman Filter to track detected objects in the environment. The robot would use a SLAM algorithm to map the environment. Unfortunately, the complexity of the algorithm and the time constraint of being a full-time student in college led to the algorithms never being finished. Even though we did not place in the competition, we were extremely proud of the progress we made. </p>
+
+                    <br> 
+
+                    <p> The robot's mechanism was designed by my partner. There was an inexpensive MPU-6050 accelerometer, which was used to correctly orient the LIDAR data in 3D space. The robot's ambulation was controlled by 2 motors and the robot mechanism was controlled by its own motor. These were all programmed using an Arduino UNO and a PID algorithm was tuned to rotate the mechanism in a smooth manner. The accelerometer was not plugged into the Arduino for the simple reason that the rest of the robot maxed out the number of available interrupt pins. The LIDAR sensor was connected to a Raspberry Pi 3, since the primary communication port was Ethernet. Additionally, the Raspberry Pi has WiFi capabilities built in, so it would be easy to upload the data.</p>
+
+                    <br> 
+
+                    <p> The controller code for the sensor was written in Python 3. Once the data was captured, it was uploaded to AWS DynamoDB. A separate script converted the raw data to the .las format, which allows it to be interpreted by LIDAR software. From here, it was uploaded to an S3 bucket. I coded an Electron app that could view the scans on S3, complete with measurement tools and the ability to search through scans. Since this was coded on Electron, the app was cross-platform, being able to be viewed on Windows, Mac OS, and Linux. </p>
                 </div>
 
                 <hr class="featurette-divider">
@@ -155,7 +165,11 @@
                     <p class="lead">Final Project for ECE 408: Applied Parallel Programming</p>
                     <p class="lead"> Spring 2020: Completed</p>
                     <hr class="my-4">
-                    <p>Using advanced techniques to drastically speed up a raytracing algorithm</p>
+                    <p>I took ECE 408 in my spring semester junior year. The final project for the course was to take multithreaded, sequential raytracing code and drastically speed it up by using CUDA on GPUs. The actual background for the raytracing algorithm is a bit involved, but it involves approximating the rendering equation. The algorithm is a bit simplified so that it was able to be completed in a few weeks, but this meant that it only works with spheres.</p>
+
+                    <br> 
+
+                    <p> The final code was tested on the school's GPU cluster (TITAN V GPUs) as well as my personal GPU (Nvidia 2060 Super), and we were able to achieve an incredible speedup.</p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
