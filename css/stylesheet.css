@@ -1,382 +1,144 @@
-/* GENERAL STYLES
------------------------------------*/
+/* --- Bootstrap CSS - Heavily adapted from the Carousel Sample Webpage ---*/
 
-html,
-body {
-	overflow-x: hidden;
-}
+/*=========================================================================*/
 
+/* HTML text settings */
 html {
-	overflow-y: scroll;
+    font-size: 100%;
 }
 
+/* Main Body class padding and lighter text color */
 body {
-	background-color: #131f33;
-	background-position: 0 -2%;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-strong {
-	font-weight: 600;
-}
-
-h1 {
-	font-size: 2.5em;
-	color: #fff;
-	font-weight: 300;
-}
-
-h2 {
-	font-size: 2em;
-	color: #fff;
-}
-
-h3 {
-	font-size: 1.7em;
-	color: #fff;
-}
-
-h4 {
-	font-size: 1.2em;
-	color: #fff;
-}
-
-.title {
-	padding-bottom: 10px;
-	text-align: center;
-}
-
-/* NAV
-  --------------------------*/
-.nav-logo {
-	display: inline-block;
-	height: 45px;
-	padding-left: 20px;
-	margin-top: 8px;
-}  
-
-.iconAlign {
-	text-align: center;
-	margin-top: 2%;
-	margin-bottom: 10px;
-	position: relative;
-}
-
-.nav-items {
-	overflow: hidden;
-	float: center;
-	align-content: center;
-	text-align: center;
-	background-color: #333;
-}
-
-.nav-items a {
-	font-size: 18px;
-	position: relative;
-	text-align: center;
-	color: white;
-	padding: 14px 16px;
-	padding: 5px 5px;
-	text-decoration: none;
-}
-
-.dropdown {
-	display: inline-block;
-}
-
-.nav-items a:hover,
-.dropdown:hover .dropbtn {
-	background-color: silver;
-}
-
-.encapsulate {
-	background-color: #333;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 2;
-}
-
-.dropdown .dropbtn {
-	margin: none;
-	font-size: 18px;
-	border: 0px;
-	outline: none;
-	color: white;
-	background-color: inherit;
-	font-family: inherit;
-	padding: 5px 5px;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	color: black;
-	background-color: black;
-	min-width: 160px;
-	text-align: center;
-	z-index: 1;
-}
-
-.dropdown-content a {
-	float: none;
-	color: black;
-	/* padding: 12px 16px; */
-	text-decoration: none;
-	display: block;
-	text-align: left;
-}
-
-.dropdown-content a:hover {
-	background-color: grey;
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-	color: black;
-}
-
-.hamburgerIcon a {
-	display: none;
-}
-
-a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-a.anchor {
-	display: block;
-	position: relative;
-	top: -50px;
-	visibility: hidden;
-}
-
-a:visited {
-	color: white;
-	text-decoration: none;
-}
-
-a:active {
-	color: white;
-	text-decoration: none;
-}
-
-a:link {
-	color: white;
-	text-decoration: none;
-}
-
-
-/* HERO BANNER-IMAGE */
-
-.header {
-	width: 100%;
-	text-align: center;
-	font-size: 4em;
-	color: white;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	margin-top: 0%;
-	margin-bottom: 1%;
-	z-index: 1;
-	overflow: hidden;
-}
-
-.hackIllinois {
-	margin-top: 2%;
-	height: 50vh;
-	position: relative;
-	background: url(../images/booth_1.jpg) center center;
-	background-size: cover;
-	z-index: 0;
-}
-
-.project-info {
-	color: white;
-	font-size: 1.3em;
-}
-
-.wave-info {
-	color: white;
-	font-size: 1.3em;
-	display: list-item;
-}
-
-.steve-navistar {
-	margin-top: 2%;
-	height: 50vh;
-	position: relative;
-	background: url(../images/steve-navistar.jpg) center center;
-	background-size: cover;
-	z-index: 0;
-}
-
-.zuofu-crop {
-	margin-top: 2%;
-	height: 50vh;
-	position: relative;
-	background: url(../images/zuofu-crop.jpg) center center;
-	background-size: cover;
-	z-index: 0;
-}
-
-.electric {
-	margin-top: 2%;
-	height: 50vh;
-	position: relative;
-	background: url(../images/formula-electric.jpg) center center;
-	background-size: cover;
-	z-index: 0;
-}
-
-.apollo {
-	margin-top: 2%;
-	height: 50vh;
-	position: relative;
-	background: url(../images/render.JPG) center center;
-	background-size: cover;
-	z-index: 0;
-}
-
-.videowrap {
-	margin: 0 auto;
-	max-width: 1000px;
-	width: 100%;
-}
-
-.resume-mobile{
-	display: none;
-}
-
-.resume-desktop{
-	display: block;
-}
-
-.video-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-
-iframe {
-	margin: auto;
-	display: block;
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.headshot {
-	margin-left: 2%;
-	margin-right: 5%;
-	margin-top: 3%;
-	margin-bottom: 0 auto;
-	border-radius: 50%;
-}
-
-.main-layout {
-	font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1600 - 300)));
-	display: inline-block;
-}
-
-.IFE_link {
-	color: white;
-}
-
-.IFE_link a {
-	color: white;
-	text-decoration: none;
-}
-
-.IFE_link a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-/* MOBILE PAGE ---------------------------- */
-
-@media screen and (max-width:1130px) {
-	
-}
-
-
-@media screen and (max-width:766px) {
-	.nav-logo {
-		height: 43px;
-		padding-bottom: 8px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
   }
   
-	.headshot-mobile {
-		width: 100%;
-		text-align: center;
-  }
-  .hackIllinois, .electric, .steve, .zuofu-crop{
-		height: 60vw;
-	}
-
-	.main-layout {
-		font-size: 10px;
-		display: inline-block;
-	}
-	.nav-items {
-		overflow: hidden;
-		float: center;
-		align-content: center;
-		text-align: center;
-		background-color: #333;
-	}
-	.dropdown-content a{
-		display: none;
-	}
-
-	.nav-items.responsive a {
-		display: block;
-		text-align: center;
-		margin: 0 -9999px;
-		padding: 14px 9999px;
-	}
- .encapsulate {
-		display: block;
-		background-color: #333;
-		position: absolute;
-		width: 100%;
-		z-index: 2;
-	}
-	.project-pic {
-		height: 50vw;
-		width: 90vw;
-	}
-	.heroText {
-		width: 100%;
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		margin-top: 20%;
-		z-index: 1;
-	}
-	.resume-desktop{
-		display: none;
-	}
-	.resume-mobile{
-		display: block;
-		color: white;
-		font-size: 2em;
-	}
+/* "Harris Mohamed" customization
+-------------------------------------------------- */
+.vanity_header {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: -3rem;
 }
 
-@media screen and (max-height:600px) and (orientation:landscape) {
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
 
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-header {
+    font-size: 2vw;
+    /* background-color: black; */
+}
+
+.carousel-detail {
+    font-size: 1vw;
+}
+
+.carousel-mod {
+    background-color: black;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* Declare heights because of positioning of img element */
+/* .carousel-item {
+    height: 32rem;  
+    vertical-align: middle;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+} */
+
+/* Card deck customizations */
+.card-deck {
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+.custom-caption {
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Highlights customization */ 
+.highlights {
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.marketing h2 {
+    font-weight: 400;
+}
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 3rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+/* Bump up size of carousel content */
+.carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.featurette-heading {
+    font-size: 50px;
+}
+}
+
+@media (min-width: 62em) {
+.featurette-heading {
+    margin-top: 7rem;
+}
 }
