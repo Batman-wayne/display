@@ -12,7 +12,12 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
+    
   }
+
+li {
+    list-style: none;
+}
   
 /* "Harris Mohamed" customization
 -------------------------------------------------- */
@@ -20,6 +25,10 @@ body {
     font-size: 3rem;
     text-align: center;
     margin-top: -3rem;
+}
+
+.hackme-list {
+    list-style: square;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -68,6 +77,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.card-title {
+    text-align: center;
+}
+
 .card-body {
     display: flex;
     flex-direction: column;
@@ -89,6 +102,11 @@ body {
     object-fit: cover;
 }
 
+.navbar-example {
+    list-style: none;
+}
+
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -105,6 +123,19 @@ body {
     margin-left: .75rem;
 }
 
+.custom-sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.sticky-offset {
+    top: 56px;
+}
+
+.navbar-example {
+    list-style: none;
+}
 
 /* Featurettes
 ------------------------- */
