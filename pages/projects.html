@@ -169,7 +169,7 @@
 
                     <br> 
 
-                    <p> The final code was tested on the school's GPU cluster (TITAN V GPUs) as well as my personal GPU (Nvidia 2060 Super), and we were able to achieve an incredible speedup.</p>
+                    <p> The final code was tested on the school's GPU cluster (TITAN V GPUs) as well as my personal GPU (Nvidia 2060 Super), and we were able to achieve an incredible speedup. We did this by using concepts such as </p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
@@ -179,7 +179,11 @@
                     <h1 class="display-4">Project Watchdog</h1>
                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Project WatchDog was our entry into the innovateFPGA competition. The competition gives an FPGA, and asks to develop something on it related to AI. Bolstered by our success with Project LD, we decided to pursue a similar project for the competition: A real time smart home security camera. There are several security cameras that exist in the market, but the key with this one is that it would be able to detect anything (pets, people, objects) and would also not require the internet. The cameras that exist in the market stream the entire camera footage to external servers for parsing, but this would serve as an edge device, accelerated by an FPGA. </p>
+
+                    <br> 
+
+                    <p> The plan was to pass the data from a camera to the FPGA. From there, a neural net trained to classify objects, people, and animals would be running on the FPGA, and from there would send the classification via Ethernet to a home server. This way, the amount of data communicated from the FPGA would be much lower than sending video frames over the internet. Unfortunately, time constraints (we both had full time internships) led to us not having enough time for the neural net, which made our project a failure. However, it was an extremely valuable learning experience. </p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
@@ -187,9 +191,17 @@
 
                 <div class="jumbotron" id="ld-scrollspy">
                     <h1 class="display-4">Project LD</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p class="lead">Dynamic, real time motion tracking accelerated by an FPGA</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>After taking ECE 385, my interest in FPGAs and hardware acceleration has been peaked. Project LD is our attempt at Augmented Reality (AR) assisted beer pong (minus the beer). The project is named "Project LD", which is short for "Projects Legends Never Die", which is a nod to our professor, whose profile picture on our class website is the "Legends Never Die" meme. The goal was to track a bouncing ping pong ball using a camera in 3-dimensions in realtime and then superimpose the path of the bouncing ball on the video feed as well as superimpose the path that should have been taken to get the ball into the cup. We were able to get a successful 2D track of the ball's position and scale, but did not have time to work on the 3D track. For this project, we used the DE2-115 expansion board with the Altera Cyclone IV E FPGA. We were provided with the 1.3 megapixel camera module, and spent a majority of the project interfacing the camera with the FPGA. By the end of 2 weeks, we were able to have a fully functioning 1.3 megapixel camera outputting its feed via VGA to a computer monitor. In addition, we were able to interface the NIOS II E microcontroller as a System-on-chip to toggle the camera settings. We made heavy use of exposure, red gain, blue gain, and green gain settings to achieve the best picture quality we could. The tracking was done very similar to how the visual effects software Adobe After Effects achieves its 2D motion track: In After Effects, you choose the point you want to track, and it generates a small box on the screen. Frame-by-frame, it then tracks the change in position and scale by looking at the change in high contrast points within the box. We made an FPGA-module to do the exact same thing, except in realtime. It worked rather well, but could not keep the track if the ball was dropped. The reason for this is we need to add a module that accomplishes frame interpolation. Since a falling ball falls very fast relative to the frame, comparing the frame before the drop to the frame after the drop will show a large vertical change between frames. Frame interpolation will guess where the ball would have been between the frames, and would allow for a much better track. </p>
+
+                    <br>
+
+                    <p> The last leg of this project would have been exploiting constraints to get a 3D motion track with one camera. There are a few additional things we would have to do. </p>
+
+                    <br>
+
+                    <p> Here is a compilation of our progress through this project.</p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
@@ -228,15 +240,15 @@
                     <h1 class="display-4 id="list-item-1"">IFE - Apollo</h1>
                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>After my first year on IFE, I got promoted to the leader of the Data Acquisition and Quantitative Analysis (DAQA) team, whose primary goal is to log data from all the sensors on the car, timestamp them, and then upload it to a server. It gathers data from 4 accelerometers, 30 strain gauges, a GPS, the position of the steering wheel, the coolant temperature, the brake pressure, the throttle and regen pedal potentiometer, CAN, hall effect sensors, and the voltage of the low voltage battery pack.</p>
+
+                    <br> 
+
+                    <p> The system consisted of Raspberry Pi Zero boards with a custom PCB on top of each Pi. There would be one board near each tire and one in the center, by the driver's seat, which would distribute the data evenly across each board. Each Pi would then send data to the central pi, which would then timestamp and upload  the data. The data would then be parsed and analyzed using AWS. </p>
+
+                    <br> 
+
+                    <p> Due to time constraints and hardware issues, the final system did not work as intended. However, it was a valuable learning experience. </p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
@@ -245,7 +257,7 @@
                     <h1 class="display-4">OCR & Dyslexia</h1>
                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>As part of the 2018 ECE PULSE competition, me and 3 other group members interfaced a Tobii eye tracker with a C# application to assist those with dyslexia. This would operate by using OCR to analyze when someone is trying to read text on a computer screen and based on how long someone is looking at text, analyze if they are having trouble reading it. Then, it can take the data and then graph it. Due to time constraints, we were only able to get the eye tracker data and figure out what parts of the screen were being looked at. We were 2nd place runners up in the competition.</p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
@@ -256,9 +268,9 @@
                     <p class="lead">The quest for wireless data</p>
                     <p class="lead"> 2017 - 2018 </p>
                     <hr class="my-4">
-                    <p>I was an active member of Illini Formula Electric (IFE), where we design and build a formula-style electric car from scratch. The club is entirely student run. We are limited to 300V. In the summer we compete at the FSAE competition in several events. The battery that our car runs off of is comprised of 336 LiFePO4 cells that are wired together in a series-parallel combination that yields 300V and 175A overall. The competition rules require us to monitor the temperature and voltage of each battery cell. The old method of doing this was using the Elithion Proprietary Battery Management System (BMS). This system only runs on very old team laptops, which are archaic, cumbersome, and limited to a hardwire connection. As a freshman, I designed a PCB that could read data off the CAN bus and then output it over bluetooth to a laptop.</p>
+                    <p>I was an active member of Illini Formula Electric (IFE), where we design and build a formula-style electric car from scratch. The club is entirely student run. We were limited to 300V (that limit has since be raised to 600V). In the summer we compete at the FSAE competition in several events. The battery that our car runs off of is comprised of 336 LiFePO4 cells that are wired together in a series-parallel combination that yields 300V and 175A overall. The competition rules require us to monitor the temperature and voltage of each battery cell. The old method of doing this was using the Elithion Proprietary Battery Management System (BMS). This system only runs on very old team laptops, which are archaic, cumbersome, and limited to a hardwire connection. As a freshman, I designed a PCB that could read data off the CAN bus and then output it over bluetooth to a laptop.</p>
                     <br> 
-                    <p> In addition, I also developed a GUI that was capable of outputting the data in realtime. This was done in C# using the .NET framework.</p>
+                    <p> I also developed a GUI that was capable of outputting the data in realtime. This was done in C# using the .NET framework.</p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
@@ -266,9 +278,13 @@
 
                 <div class="jumbotron" id="wireless-scrollspy">
                     <h1 class="display-4">Wireless Charger</h1>
-                    <p class="lead">ECE 110 & PULSE Hardware Competition - Fall 2017</p>
+                    <p class="lead">ECE 110 - Fall 2017</p>
                     <hr class="my-4">
-                    <p>At the end of ECE 110, you get the opportunity to create anything you want so long as it incorporates some kind of sensor. Most people are lazy and make a simple line following car. Me and my partner, however, decided to try something a lot more interesting: making a wireless charger capable of charging a smartphone. The theory was that we would have .</p>
+                    <p>At the end of ECE 110, students get the opportunity to work on any project so long as it incorporates some kind of sensor. Most people are lazy and make a simple line following car. Me and my partner, however, decided to try something a lot more interesting: making a wireless charger capable of charging a smartphone. The theory was that we would have a function generator generating a sinusoidal wave with the appropriate current and voltage. This would be fed into the transmitter coil of a transformer. The receiver coil of the transformer would receive a sinusoidal wave (the goal was 5 V, 200mA. 5V is DC voltage and 200mA is how much current a phone needs to charge). The sine wave would then be fed into a full-wave rectifier, which would output a 5V, 200mA wave.</p>
+
+                    <br> 
+
+                    <p> Some of you with a background in circuits might be laughing, but bear in mind neither of us had any exposure to signal processing at all (and wouldn't have any exposure until 2 years later). There were a lot of issues, but we went from a project that wasn't functioning to a circuit that output 5V, 50mA. The coils were made by hand using magnet wire. </p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </div>
 
