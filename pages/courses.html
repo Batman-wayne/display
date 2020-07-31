@@ -46,15 +46,16 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#list-projects" class="navbar-example" data-offset="0">
     <div class="vanity_header" id="topContent"> 
         <label>HARRIS MOHAMED</button>
     </div>
 
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
     <!-- Header -->
     <header>
         <!-- I removed a "fixed-top" from the nav class -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,73 +97,258 @@
 
     
            <!-- START THE FEATURETTES -->
-           <div class="container marketing highlights">
-            <div class="jumbotron">
-                <h1 class="display-4">Courses</h1>
-                <p class="lead">Courses that I've taken that are relevant to my major and research areas. Arranged in reverse chronological order.</p>
-                <hr class="my-4">
-              </div>
-          <hr class="featurette-divider">
-      
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">ECE 391: <span class="text-muted">Operating Systems</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
-      
-          <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">ECE 408: <span class="text-muted">Applied Parallel Programming</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
-      
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">ECE 448: <span class="text-muted">Introduction to Artificial Intelligence</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
+           <div class="container-fluid">
+            <div class="row justify-content-md-center"> 
+                <div class="col col-lg-2"> 
+                    <ul id="list-projects" class="list-group sticky-top sticky-offset">
+                        <li> <a class="list-group-item list-group-item-action" href="#391-scrollspy">Operating Systems</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#408-scrollspy">Parallel Programming</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#448-scrollspy">Artificial Intelligence</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#343-scrollspy">Electronic Circuits</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#310-scrollspy">Digital Signal Processing</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#311-scrollspy">Digital Signal Processing Lab</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#374-scrollspy">Algorithms</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#385-scrollspy">FPGA Development</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#498-scrollspy">Internet of Things</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#286-scrollspy">Differential Equations</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#225-scrollspy">Data Structures</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#212-scrollspy">Electricity and Magnetism</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#211-scrollspy">Mechanics</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#110-scrollspy">Circuits</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#220-scrollspy">Computer Systems Programming</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#241-scrollspy">Calculus III</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#120-scrollspy">Computing</a></li>
+                        <li> <a class="list-group-item list-group-item-action" href="#231-scrollspy">Calculus II</a></li>
 
-          <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">ECE 343 <span class="text-muted"></span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </ul>
+                </div>
+
+                <div class="col align-self-center">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Courses</h1>
+                        <p class="lead">Courses that I've taken that are relevant to my major and research areas. Arranged in reverse chronological order.</p>
+                        <hr class="my-4">
+                      </div>
+                  <hr class="featurette-divider">
+              
+                  <div class="row featurette" id="391-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">ECE 391: <span class="text-muted">Operating Systems</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+              
+                  <hr class="featurette-divider">
+              
+                  <div class="row featurette" id="408-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">ECE 408: <span class="text-muted">Applied Parallel Programming</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+              
+                  <hr class="featurette-divider">
+              
+                  <div class="row featurette" id="448-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">ECE 448: <span class="text-muted">Introduction to Artificial Intelligence</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+              
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="343-scrollspy"> 
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">ECE 343: <span class="text-muted">Electronics Circuits Laboratory</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="310-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">ECE 310: <span class="text-muted">Digital Signal Processing</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="311-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">ECE 311: <span class="text-muted">Digital Signal Processing Laboratory</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="374-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">ECE 374: <span class="text-muted">Introduction to Algorithms and Models of Computing</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="385-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">ECE 385: <span class="text-muted">Digital Systems Laboratory (FPGA development)</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="498-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">CS 498: <span class="text-muted">Internet of Things</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="286-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">MATH 286: <span class="text-muted">Differential Equations</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="225-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">CS 225: <span class="text-muted">Data Structures</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="212-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">PHYS 212: <span class="text-muted">Electricity & Magnetism</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="211-scrollspy"> 
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">PHYS 211: <span class="text-muted">Mechanics</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="110-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">ECE 110: <span class="text-muted">Introduction to Circuits</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="220-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">ECE 220: <span class="text-muted">Computer Systems and Programming</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="241-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">MATH 241: <span class="text-muted">Calculus III</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="120-scrollspy">
+                    <div class="col-md-7">
+                      <h2 class="featurette-heading">ECE 120: <span class="text-muted">Introduction to Computing</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+        
+                  <hr class="featurette-divider">
+        
+                  <div class="row featurette" id="231-scrollspy">
+                    <div class="col-md-7 order-md-2">
+                      <h2 class="featurette-heading">MATH 231: <span class="text-muted">Calculus II</span></h2>
+                      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                    </div>
+                  </div>
+                   
+                  <hr class="featurette-divider">
+                </div>
             </div>
-            <div class="col-md-5 order-md-1">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
-      
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
+        </div>
     
           <!-- /END THE FEATURETTES -->
           </div>
