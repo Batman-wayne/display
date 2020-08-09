@@ -78,7 +78,7 @@
                     <a class="nav-link" href="./professional.html">Professional</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./resume.html">Resume</a>
+                    <a class="nav-link" href="../resume/harris-mohamed-2020.pdf">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./about.html">About</a>
@@ -121,7 +121,7 @@
                 <div class="jumbotron">
                     <h1 class="display-4">Projects</h1>
                     <hr class="my-4">
-                    <p class="lead">A collection of projects and competitions that I am extremely proud of, presented in reverse chronological order.</p>
+                    <p class="lead">A collection of projects and competitions that I am very proud of, presented in reverse chronological order. </p>
                     <!-- <hr class="my-4">
                     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
                 </div>
@@ -137,7 +137,10 @@
 
                     <br> 
 
-                    <p> The physics plugin and robot simulation will be completed using Unreal Engine. The engine will not only allow for an accurate, physics-based simulation, but also an aesthetic one. </p>
+                    <p> The plugin used is Microsoft AirSim. This plugin allows for Python code to be run that controls the model (in this case, we can only control a model made by Microsoft, which is a car). Unreal Engine shows the results of the simulation. I loaded a custom environment into Unreal and have been using that for initial testing. From here, I will use the LIDAR APIs provided by Microsoft to simulate Sentinel in the field, and hopefully tune the filters and algorithms needed. </p>
+
+                    <img src="../images/airsim.png" class="img-fluid" alt="Responsive image">
+                    <p class="image-caption"> Screenshot of Unreal Engine in the middle of a simulation </p>
                 </div>
 
                 <hr class="featurette-divider">
@@ -149,13 +152,28 @@
                     <hr class="my-4">
                     <p>The TiM $10K Challenge is an annual competition hosted by SICK. Inc, a German company that manufactures sensors for factory and logistics automation. The goal of the competition is rather vague and open-ended: Simply use the TiM781, a 2D LIDAR sensor, in any application. For this competition, I teamed up with my friend (who is a Mechanical Engineer), and we came up with the idea for Project Sentinel: an autonomous robot that is designed to become a part of a security team and detect intruders in an indoor environment. The robot houses a novel mechanism that rotates the 2D sensor in 3-dimensions and is able to accurately reproduce 3D environments. Once the environment is scanned, the plan was to feed the data into a Kalman Filter to track detected objects in the environment. The robot would use a SLAM algorithm to map the environment. Unfortunately, the complexity of the algorithm and the time constraint of being a full-time student in college led to the algorithms never being finished. Even though we did not place in the competition, we were extremely proud of the progress we made. </p>
 
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mi0v6nDVEwM" allowfullscreen></iframe>
+                    </div>
+
+                    <p> Video summarizing Project Sentinel </p>
                     <br> 
 
                     <p> The robot's mechanism was designed by my partner. There was an inexpensive MPU-6050 accelerometer, which was used to correctly orient the LIDAR data in 3D space. The robot's ambulation was controlled by 2 motors and the robot mechanism was controlled by its own motor. These were all programmed using an Arduino UNO and a PID algorithm was tuned to rotate the mechanism in a smooth manner. The accelerometer was not plugged into the Arduino for the simple reason that the rest of the robot maxed out the number of available interrupt pins. The LIDAR sensor was connected to a Raspberry Pi 3, since the primary communication port was Ethernet. Additionally, the Raspberry Pi has WiFi capabilities built in, so it would be easy to upload the data.</p>
 
                     <br> 
 
+                    <img src="../images/sentinel-headshot.jpg" class="img-fluid" alt="Responsive image">
+                    <p class="image-caption"> Project Sentinel in all his glory </p>
+
+                    <br>
+
                     <p> The controller code for the sensor was written in Python 3. Once the data was captured, it was uploaded to AWS DynamoDB. A separate script converted the raw data to the .las format, which allows it to be interpreted by LIDAR software. From here, it was uploaded to an S3 bucket. I coded an Electron app that could view the scans on S3, complete with measurement tools and the ability to search through scans. Since this was coded on Electron, the app was cross-platform, being able to be viewed on Windows, Mac OS, and Linux. </p>
+
+                    <br> 
+
+                    <img src="../images/sentinel-viz.png" class="img-fluid" alt="Responsive image">
+                    <p class="image-caption"> Screenshot of Electron visualizer </p>
                 </div>
 
                 <hr class="featurette-divider">
@@ -169,8 +187,12 @@
 
                     <br> 
 
-                    <p> The final code was tested on the school's GPU cluster (TITAN V GPUs) as well as my personal GPU (Nvidia 2060 Super), and we were able to achieve an incredible speedup. We did this by using concepts such as </p>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    <p> The final code was tested on the school's GPU cluster (TITAN V GPUs) as well as my personal GPU (Nvidia 2060 Super), and we were able to achieve an incredible speedup. We did this by using concepts such as downsampling (give the algorithm less samples to work with), depth constraining (Limiting the number of ray bounces), and reducing global memory accesses. The results are summarized below. The algorithm was given the description of spheres in the scene (size, location, and material) and output the image. </p>
+
+                    <br> 
+
+                    <img src="../images/raytracing.png" class="img-fluid" alt="Responsive image">
+                    <p class="image-caption"> Raytracing output </p>
                 </div>
 
                 <hr class="featurette-divider">
@@ -293,7 +315,7 @@
                 <div class="jumbotron" id="steve-scrollspy">
                     <h1 class="display-4">S.T.E.V.E.</h1>
                     <p class="lead">Senior Tech Final Project</p>
-                    <p class="lead">August 2016 - Status: Completed</p>
+                    <p class="lead">August 2016 - May 2017</p>
                     <hr class="my-4">
                     <p>S.T.E.V.E. (which stands for Self Teaching Elevated Vehicle Entity), is a drone designed from scratch that was designed to serve as an aid during natural disasters. S.T.E.V.E. was designed for Senior Tech, which was a high school capstone course where we could work on any STEM related project for a year. The concept was to create an autonomous drone capable of surveying locations where individuals stranded in dangerous situations could be without risking the life of an emergency responder. To accomplish this, we made a fully featured drone with a custom flight controller, camera to view the surroundings (to live stream what the environment looks like back to a VR headset at the base station), a speaker with an onboard AI (to communicate to a victim of a natural disaster), and sensors (to make sure it doesn't fly into any obstacles as well as update location). Even though we were extremely ambitious and did not meet all of our goals, this project was ultimately a success. The project was met with high praise and was presented at a limited engineering expo at Navistar. This is also the project that made me realize I wanted to be a Computer Engineer, as this project was worked on during the time in which I applied to colleges. Working on this project made me realize my love for combining hardware and software to produce something greater than the sum of its parts. </p>
                     <br> 
