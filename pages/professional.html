@@ -50,11 +50,11 @@
     <div class="vanity_header" id="topContent"> 
         <label>HARRIS MOHAMED</button>
     </div>
-
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
     <!-- Header -->
     <header>
         <!-- I removed a "fixed-top" from the nav class -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark"> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -114,7 +114,7 @@
               <p class = "lead"> My second project was writing a thread safe queue that could receive RF packets and then parse them. One thread would continuously receive packets and place them on a queue, and another thread pops the packets and parses them. This project was extremely interesting and allowed me to explore multithreading in a professional environment. </p>
             </div>
             <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="../images/mt-b.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
             </div>
           </div>
       
@@ -124,9 +124,17 @@
             <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading">Kratos | RT Logic <br><span class="text-muted">Summer 2019</span></h2>
               <p class="lead">I went to the company in Colorado Springs, Colorado for the summer. This was really my first introduction to a defense constractor and I really enjoyed it. My summer was split into two tasks.</p>
+
+              <br> 
+
+              <p class="lead"> My first task was software. The team I was on worked on a tool that could take in satellite transponder data and output many useful visuals primarily in the field of Space Situational Awareness, such as satellite position prediction and bandwidth utilization. This tool's frontend was programmed using Angular JS, and my first task was to create a testing suite for the UI. Once I finished that, I moved on to add some features and fix some bugs with the GUI.</p>
+
+              <br> 
+
+              <p class="lead"> My second task was hardware. There was a narrow-bandwidth high-speed FPGA-based digitizer, which was designed to sit at the base of an antenna and in real time, quantize incoming packets. The digitizer had actually been put aside, with no progress made on it for a year due to the fact that the clock on the board was not locking. After quite a lot of hours spent in the lab, the error was revealed: the input clock signal was specified by the datasheet to be AC-coupled, but by accident was DC-coupled. Fixing this issue allowed the board to function properly and move on to next phases of testing.</p>
             </div>
             <div class="col-md-5 order-md-1">
-              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="../images/pytorch.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="../images/me-pikes-peak.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
             </div>
           </div>
       
@@ -134,11 +142,15 @@
       
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Continental Automotive <span class="text-muted">Summer 2018</span></h2>
+              <p class="lead">I worked on a board which was intended to become an electronic torque redistribution tool for a car. The board needed to have a diagnostic mode, so that engineers working on the board could enter an "admin" mode and run any command. I added a new CAN header which would allow the user to do just that. I had worked with CAN bus previously with Illini Formula Electric, but this was my first working with CAN in a professional environment. Instead of using Arduinos with CAN shields, I got to use the Vector suite of CAN tools to test out my code and make sure it was working. </p>
+
+              <br> 
+
+              <p class="lead">I also debugged a watchdog timer on the board, which was continuously sending a reset signal back to the microprocessor, rendering the board useless. After some debugging, it was attributed to an erroneous line of code triggering a reset. </p>
             </div>
             <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="../images/ARM.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
             </div>
           </div>
       
@@ -146,28 +158,15 @@
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Weber Packaging Solutions <span class="text-muted">Summer 2017</span></h2>
+              <p class="lead">This was my first internship. I worked on python code to automate a number generation process. I also learned how to use Visual Studio to develop windows apps using the .net framework and C#. I also used Inventor to update CAD drawings that had 1000+ parts.</p>
             </div>
             <div class="col-md-5 order-md-1">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="../images/ARM.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
             </div>
           </div>
       
           <hr class="featurette-divider">
-      
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
-    
           <!-- /END THE FEATURETTES -->
           </div>
         <!-- Marketing messaging and featurettes
