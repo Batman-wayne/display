@@ -59,6 +59,19 @@ li {
     border-radius: 10px;
 }
 
+
+.dark-mode-toggle {
+    float: right;
+}
+
+.vanity_header {
+    width: 100%;
+}
+
+.dark-mode-button-wrapper {
+    margin-right: 1rem;
+}
+
 /* Declare heights because of positioning of img element */
 /* .carousel-item {
     height: 32rem;  

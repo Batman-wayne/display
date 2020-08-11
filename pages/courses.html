@@ -23,6 +23,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../js/main.js"></script>
 
+        <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
         <!-- Styles from the example bootstrap -->
         <style>
             .bd-placeholder-img {
@@ -51,11 +54,11 @@
         <label>HARRIS MOHAMED</button>
     </div>
 
-    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    
     <!-- Header -->
     <header>
         <!-- I removed a "fixed-top" from the nav class -->
-
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -88,6 +91,7 @@
             </li> -->
 
             </ul>
+            <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode">
         </div>
         </nav>
     </header>

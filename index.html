@@ -8,6 +8,7 @@
         <meta name="author" content="Harris Mohamed">
         <meta name="generator" content="Jekyll v4.0.1">
         <title>Harris Mohamed</title>
+        
     
         <!--- Duplicate content SEO prevention -->
         <link rel="canonical" href="https://batman-wayne.github.io/">
@@ -22,6 +23,10 @@
         <!-- JS Links-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
         <!-- Styles from the example bootstrap -->
         <style>
@@ -46,16 +51,16 @@
 
 </head>
 
-<body>
-    <div class="vanity_header" id="topContent"> 
-        <label>HARRIS MOHAMED</button>
+<body> 
+    <div class="vanity_header justify-content-between" id="topContent"> 
+        <label class>HARRIS MOHAMED</label>
     </div>
-
+        
     <!-- I removed a "fixed-top" from the nav class -->
-    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+   
     <!-- Header -->
     <header>
-        
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -82,13 +87,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="pages/about.html">About</a>
             </li>
-
+            <!-- <div class="float-right dark-mode-button-wrapper"> -->
+                
+                <!-- </div> -->
             <!-- Disabled button example below -->
             <!-- <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> -->
-
+            
             </ul>
+            <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode" onclick="colorToggle()">
+            <!-- <ul class="navbar-nav ml-auto">
+                <li class="navbar-item float-right">
+                    <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm">
+                </li>
+              </ul> -->
+            
         </div>
         </nav>
     </header>
