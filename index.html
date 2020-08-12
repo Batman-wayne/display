@@ -51,16 +51,13 @@
 
 </head>
 
-<body> 
-    <div class="vanity_header justify-content-between" id="topContent"> 
-        <label class>HARRIS MOHAMED</label>
-    </div>
-        
-    <!-- I removed a "fixed-top" from the nav class -->
-   
-    <!-- Header -->
-    <header>
-        <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+<div class="vanity_header justify-content-between" id="topContent"> 
+    <label class>HARRIS MOHAMED</label>
+</div>
+    
+
+<body onload="colorCheck()"> 
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,7 +93,20 @@
             </li> -->
             
             </ul>
-            <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode" onclick="colorToggle()">
+            <!-- <div class="yote"  onclick="colorToggle()">
+                <input  id="light-mode-toggle"class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode"/>
+            </div> -->
+            <!-- <button type="button" class="btn btn-light">Light Mode</button>
+            <button type="button" class="btn btn-dark">Dark Mode</button> -->
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active"  onclick="toggleDarkMode()">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark Mode
+                </label>
+                <label class="btn btn-secondary"  onclick="toggleLightMode()">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Light Mode
+                </label>
+              </div>
+            
             <!-- <ul class="navbar-nav ml-auto">
                 <li class="navbar-item float-right">
                     <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm">
@@ -105,7 +115,6 @@
             
         </div>
         </nav>
-    </header>
 
     <!-- Main webpage -->
     <main role="main">
@@ -182,12 +191,12 @@
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
       
-        <div class="container marketing highlights">
+        <div class="container marketing highlights" >
             <div class="accordion" id="accordionExample">
-                <div class="card">
+                <div class="card" id ="highlights-main-container">
                   <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                      <label class="text-center nav-link disabled" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <label class="text-center nav-link disabled" id="highlights-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Highlights
                       </label>
                     </h2>
@@ -207,9 +216,9 @@
                             </div>
                           </div>
                       <div class="card-deck">
-                        <div class="card">
+                        <div class="card" >
                         <img src="images/steve.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="card-body" >
                             <h5 class="card-title">STEVE</h5>
                             <p class="card-text">Capstone project during senior year of high school. Proof of concept natural disaster aid drone designed from scratch. </p>
                             <a class="btn btn-primary" href="pages/projects.html#steve-scrollspy" role="button">Click for more</a>
@@ -254,7 +263,7 @@
                             <p class="card-text custom-caption"><small class="text-muted"><em> Just for fun </em></small></p>
                           </div>
                         </div>
-                        <div class="card">
+                        <div class="card" id="color-card-body">
                           <img src="images/SentinelPrime.png" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title">Sentinel Prime</h5>
@@ -348,8 +357,8 @@
       
       
         <!-- FOOTER -->
-        <footer class="container">
-          <p class="float-right"><a href="#">Return to top</a></p>
+        <footer class="container" id="footer-text">
+          <p class="float-right"><a href="./index.html" id="return-to-top-link">Return to top</a></p>
           <p>Website designed by Harris Mohamed with HTML, CSS, JS, Bootstrap and <3 </p>
         </footer>
     </main>
@@ -358,14 +367,14 @@
       
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-140232502-1');
-    </script>
+    </script> -->
 
     <!-- js links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

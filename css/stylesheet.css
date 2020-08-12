@@ -12,13 +12,13 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
-    
   }
 
 li {
     list-style: none;
 }
-  
+
+
 /* "Harris Mohamed" customization
 -------------------------------------------------- */
 .vanity_header {
@@ -71,6 +71,8 @@ li {
 .dark-mode-button-wrapper {
     margin-right: 1rem;
 }
+
+
 
 /* Declare heights because of positioning of img element */
 /* .carousel-item {

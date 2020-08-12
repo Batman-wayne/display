@@ -49,13 +49,12 @@
 
 </head>
 
-<body>
+<body onload="colorCheck()">
     <div class="vanity_header" id="topContent"> 
         <label>HARRIS MOHAMED</button>
     </div>
     
-    <!-- Header -->
-    <header>
+  
         <!-- I removed a "fixed-top" from the nav class -->
         <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark"> -->
             <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
@@ -92,10 +91,22 @@
             </li> -->
 
             </ul>
-            <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode">
-        </div>
+            <!-- <div onclick="colorToggle()">
+                <input id="light-mode-toggle" class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode"/>
+            </div>    -->
+            <!-- <button type="button" class="btn btn-light">Light Mode</button>
+            <button type="button" class="btn btn-dark">Dark Mode</button> -->
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark Mode
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Light Mode
+                </label>
+              </div>
+             </div>
         </nav>
-    </header>
+
 
     <!-- Main webpage -->
     <main role="main">
@@ -177,14 +188,14 @@
       
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140232502-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-140232502-1');
-    </script>
+    </script> -->
 
     <!-- js links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

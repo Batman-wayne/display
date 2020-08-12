@@ -17,6 +17,7 @@
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
+  --slate: #708090;
   --gray-dark: #343a40;
   --primary: #007bff;
   --secondary: #6c757d;
@@ -66,7 +67,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #000000;
 }
 
 [tabindex="-1"]:focus {

@@ -49,9 +49,9 @@
 
 </head>
 
-<body>
+<body onload="colorCheck()">
     <div class="vanity_header" id="topContent"> 
-        <label>HARRIS MOHAMED</button>
+        <label id="my-name">HARRIS MOHAMED</button>
     </div>
 
     <!-- Header -->
@@ -91,8 +91,20 @@
             </li> -->
 
             </ul>
-            <input class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode">
-        </div>
+            <!-- <div onclick="colorToggle()">
+                <input id="light-mode-toggle" class="dark-mode-button float-right" type="checkbox" checked data-toggle="toggle" data-size="sm" data-on="Dark Mode" data-off="Light Mode"/>
+            </div>        -->
+            <!-- <button type="button" class="btn btn-light">Light Mode</button>
+            <button type="button" class="btn btn-dark">Dark Mode</button> -->
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark Mode
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Light Mode
+                </label>
+              </div>
+         </div>
         </nav>
     </header>
 
@@ -110,7 +122,7 @@
       
       
         <!-- FOOTER -->
-        <footer class="container">
+        <footer class="container" id="footer-text">
           <p class="float-right"><a href="#">Return to top</a></p>
           <p>Website designed by Harris Mohamed with HTML, CSS, JS, Bootstrap and <3 </p>
         </footer>
