@@ -49,7 +49,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target="#list-projects" class="navbar-example" data-offset="0" onload="colorCheck()">
+<body data-spy="scroll" data-target="#list-projects" class="navbar-example" data-offset="0" onload="projectsColorCheck()">
     <div class="vanity_header" id="topContent"> 
         <label>HARRIS MOHAMED</button>
     </div>
@@ -95,10 +95,10 @@
             <!-- <button type="button" class="btn btn-light">Light Mode</button>
             <button type="button" class="btn btn-dark">Dark Mode</button> -->
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
+                <label class="btn btn-secondary active" onclick="toggleProjectsDarkMode()">
                   <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark Mode
                 </label>
-                <label class="btn btn-secondary">
+                <label class="btn btn-secondary" onclick="toggleProjectsLightMode()">
                   <input type="radio" name="options" id="option2" autocomplete="off"> Light Mode
                 </label>
               </div>
@@ -112,7 +112,7 @@
 
         <!-- START THE FEATURETTES -->
         <div class="container-fluid">
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center ">
             <div class="col col-lg-2">
                 <ul id="list-projects" class="list-group sticky-top sticky-offset">
                     <li> <a class="list-group-item list-group-item-action" href="#sentinel-prime-scrollspy">Sentinel Prime</a></li>
@@ -131,7 +131,7 @@
             </div>
             <div class="col align-self-center" >
 
-                <div class="jumbotron">
+                <div class="jumbotron" id="jumbotron-projects">
                     <h1 class="display-4">Projects</h1>
                     <hr class="my-4">
                     <p class="lead">A collection of projects and competitions that I am very proud of, presented in reverse chronological order. </p>
@@ -141,7 +141,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="sentinel-prime-scrollspy">
+                <div class="jumbotron" id="jumbotron-projects sentinel-prime-scrollspy">
                     <h1 class="display-4">Sentinel Prime</h1>
                     <p class="lead">A continuation of Project Sentinel, further exploring Sentinel's potential</p>
                     <p class="lead">2020 - Ongoing: In progress</p>
@@ -158,7 +158,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="sentinel-scrollspy">
+                <div class="jumbotron" id="jumbotron-projects sentinel-scrollspy">
                     <h1 class="display-4">Project Sentinel</h1>
                     <p class="lead">TiM $10K Challenge Competition Entry as well as my academic research project.</p>
                     <p class="lead">2019 - 2020: Completed</p>
@@ -191,7 +191,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="beason-scrollspy">
+                <div class="jumbotron" id="beason-scrollspy jumbotron-projects">
                     <h1 class="display-4">Simple Raytracing</h1>
                     <p class="lead">Final Project for ECE 408: Applied Parallel Programming</p>
                     <p class="lead"> Spring 2020: Completed</p>
@@ -210,7 +210,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="watchdog-scrollspy">
+                <div class="jumbotron" id="watchdog-scrollspy jumbotron-projects">
                     <h1 class="display-4">Project Watchdog</h1>
                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                     <hr class="my-4">
@@ -228,7 +228,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="ld-scrollspy">
+                <div class="jumbotron" id="ld-scrollspy jumbotron-projects">
                     <h1 class="display-4">Project LD</h1>
                     <p class="lead">Dynamic, real time motion tracking accelerated by an FPGA</p>
                     <hr class="my-4">
@@ -248,7 +248,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="hackme-scrollspy">
+                <div class="jumbotron" id="hackme-scrollspy jumbotron-projects">
                     <h1 class="display-4">Project HackMe</h1>
                     <p class="lead">Award-winning noninvasive EEG headset proof of concept</p>
                     <p class="lead">February 2019</p>
@@ -281,7 +281,7 @@
 
                 <hr class="featurette-divider">
                 
-                <div class="jumbotron" id="apollo-scrollspy">
+                <div class="jumbotron" id="apollo-scrollspy jumbotron-projects">
                     <h1 class="display-4 id="list-item-1"">IFE - Apollo</h1>
                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                     <hr class="my-4">
@@ -302,7 +302,7 @@
                 </div>
 
                 <hr class="featurette-divider">
-                <div class="jumbotron" id="ocr-scrollspy">
+                <div class="jumbotron" id="ocr-scrollspy jumbotron-projects">
                     <h1 class="display-4">OCR & Dyslexia</h1>
                     <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                     <hr class="my-4">
@@ -312,7 +312,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="gemini-scrollspy">
+                <div class="jumbotron" id="gemini-scrollspy jumbotron-projects">
                     <h1 class="display-4">IFE - Gemini</h1>
                     <p class="lead">The quest for wireless data</p>
                     <p class="lead"> 2017 - 2018 </p>
@@ -326,7 +326,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="wireless-scrollspy">
+                <div class="jumbotron" id="wireless-scrollspy jumbotron-projects">
                     <h1 class="display-4">Wireless Charger</h1>
                     <p class="lead">ECE 110 - Fall 2017</p>
                     <hr class="my-4">
@@ -347,7 +347,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="steve-scrollspy">
+                <div class="jumbotron" id="steve-scrollspy jumbotron-projects">
                     <h1 class="display-4">S.T.E.V.E.</h1>
                     <p class="lead">Senior Tech Final Project</p>
                     <p class="lead">August 2016 - May 2017</p>
@@ -388,7 +388,7 @@
 
                 <hr class="featurette-divider">
 
-                <div class="jumbotron" id="shipping-scrollspy">
+                <div class="jumbotron" id="shipping-scrollspy jumbotron-projects">
                     <h1 class="display-4">Shipping Generator</h1>
                     <p class="lead">Sometime in 2015.</p>
                     <hr class="my-4">
@@ -408,10 +408,10 @@
       
       
         <!-- FOOTER -->
-        <footer class="container">
-          <p class="float-right"><a href="#">Return to top</a></p>
-          <p>Website designed by Harris Mohamed with HTML, CSS, JS, Bootstrap and <3 </p>
-        </footer>
+        <footer class="container" id="footer-text">
+            <p class="float-right"><a href="./projects.html" id="return-to-top-link">Return to top</a></p>
+            <p>Website designed by Harris Mohamed with HTML, CSS, JS, Bootstrap and <3 </p>
+          </footer>
     </main>
 
 

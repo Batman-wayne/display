@@ -49,7 +49,7 @@
 
 </head>
 
-<body onload="colorCheck()">
+<body onload="colorAboutCheck()">
     <div class="vanity_header" id="topContent"> 
         <label id="my-name">HARRIS MOHAMED</button>
     </div>
@@ -97,10 +97,10 @@
             <!-- <button type="button" class="btn btn-light">Light Mode</button>
             <button type="button" class="btn btn-dark">Dark Mode</button> -->
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
+                <label class="btn btn-secondary active" onclick="toggleAboutDarkMode()">
                   <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark Mode
                 </label>
-                <label class="btn btn-secondary">
+                <label class="btn btn-secondary" onclick="toggleAboutLightMode()">
                   <input type="radio" name="options" id="option2" autocomplete="off"> Light Mode
                 </label>
               </div>
@@ -123,9 +123,9 @@
       
         <!-- FOOTER -->
         <footer class="container" id="footer-text">
-          <p class="float-right"><a href="#">Return to top</a></p>
-          <p>Website designed by Harris Mohamed with HTML, CSS, JS, Bootstrap and <3 </p>
-        </footer>
+            <p class="float-right"><a href="./about.html" id="return-to-top-link">Return to top</a></p>
+            <p>Website designed by Harris Mohamed with HTML, CSS, JS, Bootstrap and <3 </p>
+          </footer>
     </main>
 
 

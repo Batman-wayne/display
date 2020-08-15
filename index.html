@@ -56,7 +56,7 @@
 </div>
     
 
-<body onload="colorCheck()"> 
+<body onload="indexColorCheck()"> 
     <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -99,10 +99,10 @@
             <!-- <button type="button" class="btn btn-light">Light Mode</button>
             <button type="button" class="btn btn-dark">Dark Mode</button> -->
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active"  onclick="toggleDarkMode()">
+                <label class="btn btn-secondary active"  onclick="toggleIndexDarkMode()">
                   <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark Mode
                 </label>
-                <label class="btn btn-secondary"  onclick="toggleLightMode()">
+                <label class="btn btn-secondary"  onclick="toggleIndexLightMode()">
                   <input type="radio" name="options" id="option2" autocomplete="off"> Light Mode
                 </label>
               </div>
@@ -205,70 +205,70 @@
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <div class="card-deck">
-                            <div class="card">
+                            <div class="card card-color-mod">
                               <img src="images/render.JPG" class="card-img-top" alt="...">
                               <div class="card-body">
                                 <h5 class="card-title">IFE - Apollo</h5>
                                 <p class="card-text">PCB development and wireless datalogging for the Illini Formula Electric team.</p>
-                                <a class="btn btn-primary" href="pages/projects.html#apollo-scrollspy" role="button">Click for more</a>
+                                <a class="btn btn-mod" href="pages/projects.html#apollo-scrollspy" role="button">Click for more</a>
                                 <p class="card-text custom-caption"><small class="text-muted"><em>Registered Student Organization</em></small></p>
                               </div>
                             </div>
                           </div>
                       <div class="card-deck">
-                        <div class="card" >
+                        <div class="card card-color-mod" >
                         <img src="images/steve.jpg" class="card-img-top" alt="...">
                         <div class="card-body" >
                             <h5 class="card-title">STEVE</h5>
                             <p class="card-text">Capstone project during senior year of high school. Proof of concept natural disaster aid drone designed from scratch. </p>
-                            <a class="btn btn-primary" href="pages/projects.html#steve-scrollspy" role="button">Click for more</a>
+                            <a class="btn btn-mod" href="pages/projects.html#steve-scrollspy" role="button">Click for more</a>
                             <p class="card-text custom-caption"><small class="text-muted"><em>Academic Projects</em></small></p>
                         </div>
                         </div>
-                        <div class="card">
+                        <div class="card card-color-mod">
                         <img src="images/Sentinel.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Project Sentinel</h5>
                             <p class="card-text">Designed for a competition. Using a 2D LIDAR sensor in an unconventional way to scan, map, and visualize 3D environments.</p>
-                            <a class="btn btn-primary" href="pages/projects.html#sentinel-scrollspy" role="button">Click for more</a>
+                            <a class="btn btn-mod" href="pages/projects.html#sentinel-scrollspy" role="button">Click for more</a>
                             <p class="card-text custom-caption"><small class="text-muted"><em>Academic Projects </em></small></p>
                         </div>
                         </div>
-                        <div class="card">
+                        <div class="card card-color-mod">
                         <img src="images/Me-with-IFE.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">IFE - Gemini</h5>
                             <p class="card-text">Burn rubber, not gas. The attempt to capture useful data to an all-electric, student-built formula style racecar.</p>
-                            <a class="btn btn-primary" href="pages/projects.html#gemini-scrollspy" role="button">Click for more</a>
+                            <a class="btn btn-mod" href="pages/projects.html#gemini-scrollspy" role="button">Click for more</a>
                             <p class="card-text custom-caption"><small class="text-muted"><em>Registered Student Organization </em></small></p>
                         </div>
                         </div>
                     </div>
                     <div class="card-deck">
-                        <div class="card">
+                        <div class="card card-color-mod">
                           <img src="images/hack_group.png" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title">Project HackMe</h5>
                             <p class="card-text">Award winning noninvasive EEG headset proof of concept design.</p>
-                            <a class="btn btn-primary" href="pages/projects.html#hackme-scrollspy" role="button">Click for more</a>
+                            <a class="btn btn-mod" href="pages/projects.html#hackme-scrollspy" role="button">Click for more</a>
                             <p class="card-text custom-caption"><small class="text-muted"><em> Competition</em></small></p>
                           </div>
                         </div>
-                        <div class="card">
+                        <div class="card card-color-mod">
                           <img src="images/blender_card.png" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title">Blender</h5>
                             <p class="card-text">Fun with 3D modeling, compositing, and rendering using Blender and After Effects. Currently exploring physics simulations.</p>
-                            <a class="btn btn-primary" href="" role="button">Click for more</a>
+                            <a class="btn btn-mod" href="" role="button">Click for more</a>
                             <p class="card-text custom-caption"><small class="text-muted"><em> Just for fun </em></small></p>
                           </div>
                         </div>
-                        <div class="card" id="color-card-body">
+                        <div class="card card-color-mod" id="color-card-body">
                           <img src="images/SentinelPrime.png" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title">Sentinel Prime</h5>
                             <p class="card-text">A continuation of Project Sentinel, now refined and focused on making the data that Sentinel gathered mean something.</p>
-                            <a class="btn btn-primary" href="pages/projects.html#sentinel-prime-scrollspy" role="button">Click for more</a>
+                            <a class="btn btn-mod" href="pages/projects.html#sentinel-prime-scrollspy" role="button">Click for more</a>
                             <p class="card-text custom-caption"><small class="text-muted"><em> Academic Research </em></small></p>
                           </div>
                         </div>

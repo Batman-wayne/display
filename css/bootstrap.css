@@ -4437,7 +4437,8 @@ tbody.collapse.show {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #6c757d;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -4933,7 +4934,8 @@ tbody.collapse.show {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  /* background-color: #e9ecef; */
+  background-color: #343a40;
   border-radius: 0.3rem;
 }
 
@@ -5194,7 +5196,8 @@ tbody.collapse.show {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #343a40;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
