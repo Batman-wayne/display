@@ -73,6 +73,8 @@ body {
   outline: 0 !important;
 }
 
+
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -242,7 +244,7 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
+  margin: 0.25em;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -10113,7 +10115,10 @@ h3 {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
+  
+  
 }
+
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
