@@ -156,6 +156,24 @@
                 </div>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
+                    
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#hybrisModal">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="images/OpenAI.jpg" alt="" />
+                        </div>
+                        <div class="text-center">
+                        <button type="button" class="btn btn-outline-secondary " disabled>Just for fun</button>
+                       </div>
+                        <p class="page-section-subheading text-center text-secondary mb-0">Hybris: An experiment in text generation</p>
+                            <div class="row justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#hybrisModal">Click for details</button>
+                            </div>
+                    </div>
+
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#riscvModal">
@@ -766,6 +784,8 @@
             </div>
         </div>
 
+        
+
         <div class="portfolio-modal modal fade" id="sentinelModal" tabindex="-1" role="dialog" aria-labelledby="sentinelModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -825,6 +845,71 @@
                 </div>
             </div>
         </div>
+
+        <div class="portfolio-modal modal fade" id="hybrisModal" tabindex="-1" role="dialog" aria-labelledby="hybrisModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-left">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center" id="hybrisModal">Project Hybris</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <!-- <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mi0v6nDVEwM" allowfullscreen></iframe>
+                                    </div> -->
+                                    <!-- <p class="mb-5 rounded mb-5 text-center"> <em>Video summarizing Project Sentinel</em></p> -->
+                                    <!-- <br> -->
+                                    <!-- Portfolio Modal - Text-->
+                                    <h2> Overview</h2>
+                                    <p class="mb-5">I've always had an interest in using AI for text generation. One of my friends is a part of a website called Hybris Forum where they publish articles discussing technology, culture, and the dysfunction of technology with society. That same friend suggested I write an article as well, but writing it definitely not my strong suit. This was the perfect opportunity to experiment with text generation AIs. The current state of the art is GPT-3, a transformer network developed by OpenAI. Unfortunately, GPT-3 is not available to the public, because the text it generates is too realistic to that written by humans. </p>
+
+                                    <p class="mb-5"> Rather than go through the effort of training my own network, I decided to use GPT-2. The creators have open sourced a smaller version of GPT-2, which implies that it is bad enough to be given open access to, which is something I found out firsthand. The way I generated the article was by writing a long essay, and then finetuning the 355M model of GPT-2. After this, I generated lots of output text with input prompts. It was pretty painful to sort through the outputs and get something usable, and after spending a few days I didn't have enough text for an essay. Out of frustration, I turned to InferKit, a working demo of GPT-2. This was useful for the transitions in the essay.</p>
+
+                                    <p class="mb-5"> Check my Git to find the final Colab notebook I used. Unless GPT-3 gets released, I won't be pursuing this project any further. I would honestly call this a failure, but the final essay (also on my Git) is pretty coherent. </p>
+                                   
+                                    <!-- <h2>Robot sensors and hardware</h2>
+                                        <ul>
+                                            <li>MPU-6050 accelerometer, which was used to correctly orient the LIDAR data in 3D space</li>
+                                            <li>The robot's ambulation was controlled by 2 motors and the robot mechanism was controlled by its own motor. </li>
+                                            <li>Arduino MEGA: Control the motors with a PID algorithm was tuned to rotate the mechanism in a smooth manner. </li>
+                                            <li>Raspberry Pi 3: Communicate with LIDAR sensor via Ethernet. Communicate with AWS servers using WiFi.</li>
+                                        </ul>
+                                        <img src="images/Sentinel.jpg" class="img-fluid" alt="Responsive image">
+                                        <p class="mb-5 rounded mb-5 text-center"> <em>Sentinel in all of his glory</em></p>
+                                    <h2>Software</h2>
+                                        <ul>
+                                            <li>	Point-cloud clustering algorithm implemented in Python</li>
+                                            <li>	AWS DynamoDB for data storage and S3 buckets to store visualization files  </li>
+                                            <li>	Electron application to view environment scans   </li>
+                                        </ul> -->
+
+                                    
+                                    <!-- <br> -->
+                                    <!-- <img src="images/sentinel-viz.png" class="img-fluid" alt="Responsive image">
+                                    <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot of the Electron application with a point cloud loaded in</em></p> -->
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Portfolio Modal 2-->
         <div class="portfolio-modal modal fade" id="riscvModal" tabindex="-1" role="dialog" aria-labelledby="riscvModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
