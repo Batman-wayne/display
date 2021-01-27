@@ -65,6 +65,14 @@
       });
     });
    
+    var modals = ["#sentinelPrimeModal", "#sentinelModal", "#hybrisModal", "#riscvModal", "#blenderModal", "#lovelessModal", "#eigenmaskModal", "#cudaModal", "#lc4Modal", "#watchdogModal", "#ldModal", "#hackmeModal", "#ifeModal", "#smarthomeModal", "#ocrModal", "#steveModal", "#shippingModal", "#nvidiaModal", "#kratos1Modal", "#kratos2Modal", "#continentalModal", "#weberModal", "#UAModal", "#fourModal", "#four20Modal", "#four98Modal", "#four08Modal", "#three91Modal", "#three10Modal", "#four98Modal", "#three85Modal"]
+    var i;
+    for (i = 0; i < modals.length; i++){
+      if (window.location.hash == modals[i]) {
+        $(modals[i]).modal('show');
+   }
+    }
+    
       
   
   })(jQuery); // End of use strict
